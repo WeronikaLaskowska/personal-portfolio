@@ -29,7 +29,7 @@ export default defineComponent({
     };
     const imgURL = computed(() => {
       if (props.name === "plan") return "./../src/assets/proj1.png";
-      if (props.name === "ramen") return "./../src/assets/proj3.png";
+      if (props.name === "ramen") return "./../src/assets/proj.png";
       if (props.name === "water") return "./../src/assets/proj2.png";
       if (props.name === "portfolio") return "./../src/assets/proj4.png";
     });
