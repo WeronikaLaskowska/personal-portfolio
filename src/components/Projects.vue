@@ -23,7 +23,7 @@
           v-motion-title-left
           :title="'Web App - Plan Organiser'"
           :stack="'Vue 2.0 - Vue Router - Firebase'"
-          :src="'./src/assets/proj1.png'"
+          :src="'@/src/assets/proj1.png'"
           :link="'https://plan-organiser.netlify.app'"
           :long="'Web app created for my university thesis. It was created for teachers and employees of primary and secondary schools. Its aim is to facilitate the activities of creating a lesson plan.Plan Organiser is a web tool written in JavaScript, using the Vue.js framework.'"
         />
@@ -31,7 +31,7 @@
           v-motion-title-right
           :title="'Website - Save Water'"
           :stack="'HTML - CSS - Sass'"
-          :src="'./src/assets/proj2.png'"
+          :src="'@/src/assets/proj2.png'"
           :link="'https://nervous-galileo-8eb4db.netlify.app/'"
           :long="'Website created for fun and to practise some advanced CSS concepts using Sass preprocessor'"
         />
@@ -39,7 +39,7 @@
           v-motion-title-left
           :title="'Website - NEKO Ramen'"
           :stack="'React - Framer Motion - Styled components'"
-          :src="'./src/assets/proj.png'"
+          :src="'@/src/assets/proj.png'"
           :link="'https://cranky-ardinghelli-d6e42b.netlify.app/'"
           :long="'Website for a fictional Japanese restaurant serving Ramen. Made using React framework and its libraries. Im a ramen lover so making this one was a pleasure!'"
         />
@@ -47,7 +47,7 @@
           v-motion-title-right
           :title="'Portfolio Website'"
           :stack="'JavaScript - css - HTML'"
-          :src="'./src/assets/proj4.png'"
+          :src="'@/src/assets/proj4.png'"
           :link="'https://elegant-ride-b1d89d.netlify.app/'"
           :long="'My old portfolio website made about 6 months ago. Check out my progress!'"
         />
