@@ -1,7 +1,7 @@
 <template>
   <div class="card">
     <div @click="redirect" class="imgBx">
-      <img :src="src" alt="" />
+      <img :src="imgURL" alt="" />
     </div>
     <div class="text-content">
       <h1>{{ title }}</h1>
@@ -19,15 +19,25 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from "vue";
+import { computed, defineComponent, ref } from "vue";
 export default defineComponent({
   name: "Project",
-  props: ["src", "title", "link", "long", "stack"],
+  props: ["src", "title", "link", "long", "stack", "name"],
   setup(props) {
     const redirect = () => {
       location.href = props.link;
     };
-    return { redirect };
+    const imgURL = computed(() => {
+      if (props.name === "plan") return "./../src/assets/proj1.png";
+      if (props.name === "ramen") return "./../src/assets/proj3.png";
+      if (props.name === "water") return "./../src/assets/proj2.png";
+      if (props.name === "portfolio") return "./../src/assets/proj4.png";
+    });
+    const imgUrl = () => {
+      return new URL(`../assets/${props.src}`).href;
+    };
+
+    return { redirect, imgUrl, imgURL };
   },
 });
 </script>
