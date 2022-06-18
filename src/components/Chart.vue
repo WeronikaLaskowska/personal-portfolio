@@ -17,21 +17,21 @@
     <div v-motion-max-graph class="boxie sixt pos"></div>
   </div>
   <div class="box2 flex">
-    <img src="./../assets/image 17.png" alt="" />
-    <img src="./../assets/image 22.png" alt="" />
-    <img src="./../assets/image 23.png" alt="" />
-    <img src="./../assets/image 25.png" alt="" />
-    <img src="./../assets/image 24.png" alt="" />
-    <img src="./../assets/image 18.png" alt="" />
-    <img src="./../assets/image 9.png" alt="" />
-    <img src="./../assets/image 19.png" alt="" />
-    <img src="./../assets/image 8.png" alt="" />
-    <img src="./../assets/image 20.png" alt="" />
-    <img src="./../assets/image 7.png" alt="" />
-    <img src="./../assets/image 5.png" alt="" />
-    <img src="./../assets/image 4.png" alt="" />
-    <img src="./../assets/image 3.png" alt="" />
-    <img src="./../assets/image 6.png" alt="" />
+    <img src="./../assets/image17.png" alt="" />
+    <img src="./../assets/image22.png" alt="" />
+    <img src="./../assets/image23.png" alt="" />
+    <img src="./../assets/image25.png" alt="" />
+    <img src="./../assets/image24.png" alt="" />
+    <img src="./../assets/image18.png" alt="" />
+    <img src="./../assets/image9.png" alt="" />
+    <img src="./../assets/image19.png" alt="" />
+    <img src="./../assets/image8.png" alt="" />
+    <img src="./../assets/image20.png" alt="" />
+    <img src="./../assets/image7.png" alt="" />
+    <img src="./../assets/image5.png" alt="" />
+    <img src="./../assets/image4.png" alt="" />
+    <img src="./../assets/image3.png" alt="" />
+    <img src="./../assets/image6.png" alt="" />
   </div>
 </template>
 
