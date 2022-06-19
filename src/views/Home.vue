@@ -213,7 +213,7 @@ img {
     max-width: 80vw;
   }
   .content{
-    margin-left: -40px;
+    margin-left: -30px;
   }
 }
 @media screen and (max-width: 450px){
