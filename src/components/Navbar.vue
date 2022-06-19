@@ -57,7 +57,6 @@ export default defineComponent({
     let lastScrollTop=0;
     let active = ref("about");
     window.addEventListener('scroll', function (e) {
-      console.log(e.target.activeElement)
       let scrollTop = this.document.documentElement.scrollTop;
       let mobile = window.innerWidth < 700 ? 1.6 : 0;
       const header= document.querySelector('.nav');
