@@ -20,7 +20,8 @@
     /> 
   </div> -->
   <div
-    class="container min-w-full min-h-full grid place-items-center lg:min-h-screen overflow-hidden max-w-screen "
+      id="edu"
+    class="container min-w-full min-h-full grid place-items-center lg:min-h-screen overflow-hidden max-w-screen  "
   >
     <div
       class="content py-12 flex flex-col lg:grid lg:grid-cols-2 lg:place-items-center lg:px-12 lg:py-8"
@@ -36,7 +37,7 @@
           v-motion-p-right
           class="md:px-20 lg:px-0 text-center lg:text-right px-4 text-lg lg:text-xl"
         >
-          I had finished IT studies at <span class="font-medium purple">University of Lodz</span> and acquired my diploma in June, 2022. Graduated university with a <span class="font-medium purple">great result and a scolarship. </span>Since then I've been persuing education on my own regurarly. I use platforms such as Udemy and Youtube. Finished multiple highly rated courses. I’m also an active user of Twitter gaining daily insight into the tech world and learning interesting clues and tips regarding programming.   
+          I had finished IT studies at <span @click="redirect('uni')" class="font-medium purple underline cursor-pointer">University of Lodz</span> and acquired my diploma in June, 2022. Graduated university with a <span class="font-medium purple">great result and a scolarship. </span>Since then I've been persuing education on my own regurarly. I use platforms such as Udemy and Youtube. Finished multiple highly rated courses. I’m also an active user of Twitter gaining daily insight into the tech world and learning interesting clues and tips regarding programming.
         </p>
 
         <h2 v-motion-title-right class="title-red text-center mt-4 lg:text-right">
@@ -46,8 +47,8 @@
           v-motion-p-right
           class="px-4 md:px-20 lg:px-0 text-center lg:text-right text-lg lg:text-xl"
         >
-          Sysmo.pl: <span class="font-thin red">December 2021 - present <br></span>
-          I gained a lot of practical experience and valuable knowledge working as a front-end developer in Sysmo. I had a pleasure working on projects such as <span class="font-medium red">SeniorApp</span>  and <span class="font-medium red">Mazowiecki Dom Pogrzebowy</span> .
+         <span @click="redirect('sysmo')" class="underline cursor-pointer">Sysmo.pl</span>: <span class="font-light red">December 2021 - present <br></span>
+          I gained a lot of practical experience and valuable knowledge working as a front-end developer in Sysmo. I had a pleasure working on projects such as <span @click="redirect('senior')" class="font-medium red underline cursor-pointer">SeniorApp</span>  and <span class="font-medium red underline cursor-pointer">Mazowiecki Dom Pogrzebowy</span> .
         </p>
       </div>
     </div>
@@ -62,10 +63,12 @@ export default defineComponent({
   components: { MainDisplay },
   name: "Education",
   setup() {
-    const bigScreen = ref(true);
-    if (window.innerWidth > 766) bigScreen.value = true;
-    else bigScreen.value = false;
-    return { bigScreen };
+   const redirect =(to:any)=>{
+     if(to === 'sysmo') location.href ='https://sysmo.pl/'
+     if(to === 'uni') location.href= 'https://www.uni.lodz.pl/'
+     if(to === 'senior') location.href = 'https://seniorapp.pl/'
+   }
+    return { redirect };
   },
 });
 </script>

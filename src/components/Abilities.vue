@@ -1,23 +1,26 @@
 <template>
-  <div class="container overflow-hidden min-w-full max-w-screen min-h-full">
-    <div class="grid sm:place-items-center my-20">
-      <div
-        v-motion
-        :initial="{
+  <div id="abi" class="container overflow-hidden min-w-full max-w-screen min-h-full">
+    <div class="grid  sm:place-items-center my-20">
+      <div v-motion
+           :initial="{
           opacity: 0,
         }"
-        :visible="{
+           :visible="{
           opacity: 1,
           transition: {
             opacity: {
               duration: 1000,
             },
           },
-        }"
-        class="title-purple-edu ml-4 lg:ml-0"
-      >
-        My abilities
+        }" class="box-animation mb-12 ml-12 sm:ml-0">
+        <h1
+
+            class=" title-purple-edu ml-4 lg:ml-0"
+        >
+          My abilities
+        </h1>
       </div>
+
       <div  v-motion
         :initial="{
           opacity: 0,
@@ -29,7 +32,7 @@
               duration: 1000,
             },
           },
-        }" class="learning flex ml-6 lg:ml-0">
+        }" class="learning flex ml-20 sm:ml-6 lg:ml-0">
         <div class="box mr-4"></div>
         <p>- currently learning</p>
       </div>

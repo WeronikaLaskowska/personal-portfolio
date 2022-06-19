@@ -1,9 +1,12 @@
 <template>
-  <div class="container h-full w-screen min-w-full bg-dark overflow-hidden">
-    <bubbles />
+  <div id="home" class="container min-h-screen w-screen min-w-full bg-dark overflow-hidden">
+
     <div
-      class="content lg:min-h-screen w-screen flex flex-col-reverse content-center items-center lg:grid lg:grid-cols-2 lg:place-items-center"
+      class=" content grid place-items-center "
     >
+      <bubbles />
+      <div  class="  md:min-h-screen min-w-screen text-center lg:text-left flex flex-col-reverse items-center lg:grid lg:place-items-center lg:grid-cols-2">
+
       <div
         v-motion
         :initial="{
@@ -21,7 +24,7 @@
             mass: 1.5,
           },
         }"
-        class="text"
+        class="text mb-12 ml-12"
       >
         <h1 class="title font-medium underline underline-offset-16">
           Welcome!
@@ -33,6 +36,8 @@
           best that I can be.
         </p>
       </div>
+
+
       <div
         v-motion
         :initial="{
@@ -50,14 +55,16 @@
             mass: 1.5,
           },
         }"
-        class="pic"
+        class="pic "
       >
         <img
-          class="profile-pic rounded-full w-4/5 sm:w-3/5 lg:w-full"
-          src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80"
+          class="profile-pic rounded-full "
+          src="./../assets/me.jpg"
           alt=""
         />
       </div>
+      </div>
+
     </div>
   </div>
   <about />
@@ -166,58 +173,64 @@ img {
   max-width: 500px;
   border: 15px solid #c7dbe6;
 }
-@media screen and (min-width: 800px) {
-  .text {
+.text{
+  padding-left: 100px;
+}
+
+@media screen and (max-width: 1100px){
+  img {
+    max-width: 400px;
+  }
+  .title {
+    font-size: 84px;
+    color: #fff;
+  }
+
+  .content p {
+    font-size: 24px;
+    color: #c7dbe6;
+    padding: 30px 0px;
     max-width: 80vw;
   }
-}
-@media screen and (min-width: 1020px) {
-  img {
-    margin-left: 50px !important;
+  .text{
+    padding-left: 0px;
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 600px){
+  img {
+    max-width: 300px;
+  }
   .title {
     font-size: 64px;
+    color: #fff;
   }
-  .text {
-    width: 100vw;
-  }
-  .pic {
-    width: 100vw;
-  }
-  .content {
-    margin-left: 0px;
-    text-align: center;
-  }
+
   .content p {
-    font-size: 25px;
-    padding: 0 10px;
+    font-size: 20px;
+    color: #c7dbe6;
+    padding-bottom: 100px;
+    max-width: 80vw;
   }
-  img {
-    margin-left: 60px;
-  }
-}
-@media screen and (min-width: 740px) {
-  img {
-    margin-left: 150px;
-  }
-  .content {
-    margin-left: 50px;
+  .content{
+    margin-left: -40px;
   }
 }
-@media screen and (min-width: 640px) {
+@media screen and (max-width: 450px){
   img {
-    margin-left: 130px;
+    max-width: 300px;
+  }
+  .title {
+    font-size: 54px;
+    color: #fff;
+  }
+
+  .content p {
+    font-size: 18px;
+    color: #c7dbe6;
   }
 }
 
-@media screen and (max-width: 500px) {
-  img {
-    margin-left: 40px;
-  }
-}
 
 .hero_area {
     position: relative;

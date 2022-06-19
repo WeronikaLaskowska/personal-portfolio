@@ -1,5 +1,5 @@
 <template>
-  <div class="container overflow-hidden min-w-full max-w-screen min-h-full">
+  <div id="about" class="container overflow-hidden min-w-full max-w-screen min-h-full lg:min-h-screen">
     <div
       class="content flex flex-col lg:grid lg:grid-cols-2 lg:place-items-center lg:px-12 lg:py-8"
     >
@@ -72,7 +72,13 @@ export default defineComponent({
     const bigScreen = ref(true);
     if (window.innerWidth > 766) bigScreen.value = true;
     else bigScreen.value = false;
-    return { bigScreen };
+
+    const redirect =(to:any)=>{
+      if(to === 'git') location.href ='https://sysmo.pl/'
+      if(to === 'linked') location.href= 'https://www.uni.lodz.pl/'
+      if(to === 'ig') location.href = 'https://seniorapp.pl/'
+    }
+    return { bigScreen, redirect };
   },
 });
 </script>

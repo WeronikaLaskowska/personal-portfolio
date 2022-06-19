@@ -4,13 +4,13 @@
       <img :src="imgURL" alt="" />
     </div>
     <div class="text-content">
-      <h1>{{ title }}</h1>
+      <h1 >{{ title }}</h1>
       <p>
         {{ stack }}
       </p>
     </div>
     <div class="text-unwrapped">
-      <p @click="redirect" class="underline font-bold cursor-pointer purple">
+      <p @click="redirect" class="underline font-bold cursor-pointer red">
         WATCH
       </p>
       {{ long }}
@@ -28,10 +28,10 @@ export default defineComponent({
       location.href = props.link;
     };
     const imgURL = computed(() => {
-      if (props.name === "plan") return "./../src/assets/proj1.png";
-      if (props.name === "ramen") return "./../src/assets/proj.png";
-      if (props.name === "water") return "./../src/assets/proj2.png";
-      if (props.name === "portfolio") return "./../src/assets/proj4.png";
+      if (props.name === "plan") return "./proj1.png";
+      if (props.name === "ramen") return "./proj.png";
+      if (props.name === "water") return "./proj2.png";
+      if (props.name === "portfolio") return "./proj4.png";
     });
     const imgUrl = () => {
       return new URL(`../assets/${props.src}`).href;
@@ -93,7 +93,6 @@ export default defineComponent({
 .text-content h1 {
   font-size: 20px;
   font-weight: 500;
-  color: #ec615b;
 }
 .text-content p {
   font-size: 13px;
