@@ -1,15 +1,28 @@
 <template>
-  <div class="card">
-    <div @click="redirect" class="imgBx">
-      <img :src="imgURL" alt="" />
+  <div
+    class="card mb-24 h-48 w-80 sm:w-96 relative bg-white rounded-twenty transition-all duration-500"
+  >
+    <div
+      @click="redirect"
+      class="imgBx absolute cursor-pointer bg-white h-36 w-52 inset-x-2/4 -top-11 transition-all duration-500 -translate-x-2/4 rounded-twenty"
+    >
+      <img
+        class="absolute top-0 left-0 w-full h-full object-cover rounded-twenty"
+        :src="imgURL"
+        alt=""
+      />
     </div>
-    <div class="text-content">
-      <h1 >{{ title }}</h1>
-      <p>
+    <div
+      class="text-content absolute my-auto left-0 right-0 text-center bottom-5"
+    >
+      <h1 class="text-xl font-medium">{{ title }}</h1>
+      <p class="text-sm">
         {{ stack }}
       </p>
     </div>
-    <div class="text-unwrapped">
+    <div
+      class="text-unwrapped absolute my-auto left-0 right-0 text-center hidden text-sm"
+    >
       <p @click="redirect" class="underline font-bold cursor-pointer red">
         WATCH
       </p>
@@ -25,7 +38,7 @@ export default defineComponent({
   props: ["src", "title", "link", "long", "stack", "name"],
   setup(props) {
     const redirect = () => {
-      location.href = props.link;
+      window.open(props.link, '_blank');
     };
     const imgURL = computed(() => {
       if (props.name === "plan") return "./proj1.png";
@@ -43,77 +56,27 @@ export default defineComponent({
 </script>
 <style scoped>
 .card {
-  position: relative;
-  width: 350px;
-  height: 190px;
-  background: #fff;
-  border-radius: 20px;
   box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
-  transition: all 0.5s;
-  margin-bottom: 100px;
 }
 .card:hover {
   height: 450px;
 }
 .imgBx {
-  cursor: pointer;
-  position: absolute;
-  left: 50%;
-  top: -50px;
-  transform: translateX(-50%);
-  width: 200px;
-  height: 150px;
-  background: #fff;
-  border-radius: 20px;
-  transition: 0.5s;
   box-shadow: 0 15px 50px rgba(0, 0, 0, 0.35);
-}
-.imgBx img {
-  position: absolute;
-  border-radius: 20px;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 .card:hover .imgBx {
   width: 250px;
   height: 250px;
 }
-.text-content {
-  position: absolute;
-  bottom: 20px;
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
-  text-align: center;
-}
-.text-content h1 {
-  font-size: 20px;
-  font-weight: 500;
-}
-.text-content p {
-  font-size: 13px;
-}
+
 .card:hover .text-content {
   top: 50%;
 }
 .card:hover .text-unwrapped {
   display: block;
 }
-
 .text-unwrapped {
-  position: absolute;
   top: 63%;
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
-  text-align: center;
   padding: 2px 10px;
-  font-size: 14px;
-  display: none;
 }
 </style>

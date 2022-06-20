@@ -1,5 +1,8 @@
 <template>
-  <div id="about" class="container overflow-hidden min-w-full max-w-screen min-h-full lg:min-h-screen">
+  <div
+    id="about"
+    class="container overflow-hidden min-w-full max-w-screen min-h-full lg:min-h-screen"
+  >
     <div
       class="content flex flex-col lg:grid lg:grid-cols-2 lg:place-items-center lg:px-12 lg:py-8"
     >
@@ -9,10 +12,12 @@
         </h1>
         <p
           v-motion-p-left
-          class="md:px-20 lg:px-0 text-center lg:text-left px-4 text-lg md:text-xl  "
+          class="md:px-20 lg:px-0 text-center lg:text-left px-4 text-lg md:text-xl"
         >
           My name is Weronika and I am 23 years old. I’m a
-          <span class="font-medium purple">front-end developer and web designer</span>
+          <span class="font-medium purple"
+            >front-end developer and web designer</span
+          >
           with an interest for many technologies and with a passion to grow and
           expand my knowledge in multiple directions. I’m an aspiring full-stack
           developer with bold plans to also learn some mobile app programming.
@@ -50,13 +55,33 @@
           v-motion-title-left
           class="logos sm:px-40 lg:px-0 grid place-items-center grid-cols-3 ml-10 lg:flex"
         >
-          <img class="logo" src="./../assets/ig.png" alt="" />
-          <img class="logo" src="./../assets/git.png" alt="" />
-          <img class="logo" src="./../assets/linked.png" alt="" />
+          <img
+            @click="redirect('ig')"
+            class="logo"
+            src="./../assets/ig.png"
+            alt=""
+          />
+
+          <img
+            @click="redirect('git')"
+            class="logo"
+            src="./../assets/git.png"
+            alt=""
+          />
+          <img
+            @click="redirect('linked')"
+            class="logo"
+            src="./../assets/linked.png"
+            alt=""
+          />
         </div>
       </div>
 
-      <div v-if="bigScreen" v-motion-title-right class="img grid place-items-center lg:place-items-start">
+      <div
+        v-if="bigScreen"
+        v-motion-title-right
+        class="img grid place-items-center lg:place-items-start"
+      >
         <img class="big-image" src="./../assets/img1.png" alt="" />
       </div>
     </div>
@@ -73,11 +98,16 @@ export default defineComponent({
     if (window.innerWidth > 766) bigScreen.value = true;
     else bigScreen.value = false;
 
-    const redirect =(to:any)=>{
-      if(to === 'git') location.href ='https://sysmo.pl/'
-      if(to === 'linked') location.href= 'https://www.uni.lodz.pl/'
-      if(to === 'ig') location.href = 'https://seniorapp.pl/'
-    }
+    const redirect = (to: any) => {
+      if (to === "git")
+        window.open("https://github.com/WeronikaLaskowska", "_blank");
+      if (to === "linked")
+        window.open(
+          "https://pl.linkedin.com/in/weronika-laskowska-808382219",
+          "_blank"
+        );
+      if (to === "ig") location.href = "https://seniorapp.pl/";
+    };
     return { bigScreen, redirect };
   },
 });
@@ -93,27 +123,16 @@ export default defineComponent({
     rgba(255, 255, 255, 1) 100%
   ) !important;
 }
-.logo {
-  width: 50px;
-  height: 50px;
-  margin: 20px 50px;
-  margin-left: 0;
-  cursor: pointer;
-  transition: all 0.5s;
-}
-.logo:hover {
-  transform: translateY(-10px);
+.content {
+  max-width: 1680px;
+  margin: auto;
 }
 .big-image {
   max-width: 600px;
 }
-@media screen and (min-width:1000px) {
+@media screen and (min-width: 1000px) {
   .big-image {
     margin-bottom: -100px;
-}
-}
-.content {
-  max-width: 1680px;
-  margin: auto;
+  }
 }
 </style>

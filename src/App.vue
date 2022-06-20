@@ -18,10 +18,10 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 .red {
-  color: #ec615b;
+  color: #ec615b !important;
 }
 .purple {
-  color: #5222d0;
+  color: #5222d0 !important;
 }
 .title-red {
   color: #ec615b;
@@ -81,6 +81,8 @@ body {
   z-index: 1;
 
 }
+
+
 @keyframes border-animation {
   0%{
     transform: rotate(0deg);

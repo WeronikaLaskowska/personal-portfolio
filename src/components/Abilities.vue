@@ -135,10 +135,6 @@ export default defineComponent({
         transform: translate3d(85px, 0, 0);
     }
 }
-
-
-/*Shrinking for mobile*/
-
 @media (max-width: 768px) {
     .waves {
         height: 40px;

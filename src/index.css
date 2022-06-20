@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .logo {
+      @apply h-12 w-12 my-5 mx-12 ml-0 cursor-pointer ease-linear duration-200 hover:-translate-y-1;
+    }
+    .boxie{
+        @apply absolute bottom-0 bg-brightRed left-boxie w-8 h-2.5
+    }
+    .pos{
+        @apply bg-brightPurple
+    }
+    .element{
+      @apply overflow-visible h-full w-full object-cover rounded-full p-5 my-2.5
+    }
+     .clickable{
+       @apply font-bold cursor-pointer inline-block relative text-brightPurple after:content-[''] after:absolute after:w-full after:left-0 after:bottom-0 after:bg-brightPurple after:h-0.5 after:origin-bottom-right after:transition-transform after:duration-500 after:ease-out after:scale-x-0 hover:after:scale-x-100 hover:after:origin-bottom-left
+    } 
+    .clickable-red{
+      @apply text-brightRed after:bg-brightRed
+    }
+  }
