@@ -4,7 +4,7 @@
     class="container overflow-hidden min-w-full max-w-screen min-h-full lg:min-h-screen"
   >
     <div
-      class="content flex flex-col lg:grid lg:grid-cols-2 lg:place-items-center lg:px-12 lg:py-8"
+      class="content flex flex-col lg:grid lg:grid-cols-2 lg:place-items-center lg:px-12 lg:py-8 pt-20"
     >
       <div class="text-section flex flex-col">
         <h1 v-motion-title-left class="title-purple text-center lg:text-left">

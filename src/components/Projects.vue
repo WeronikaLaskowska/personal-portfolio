@@ -1,18 +1,7 @@
 <template>
   <div id="proj" class="container overflow-hidden min-w-full max-w-screen min-h-full">
     <div class="grid place-items-center gap-36 mt-12 py-12 pb-20">
-      <div v-motion
-           :initial="{
-          opacity: 0,
-        }"
-           :visible="{
-          opacity: 1,
-          transition: {
-            opacity: {
-              duration: 1000,
-            },
-          },
-        }" class="box-animation">
+      <div v-motion-titles class="box-animation">
         <h1 class="title-red title-animated">My projects</h1>
 
       </div>

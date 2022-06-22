@@ -17,7 +17,7 @@ app.use(MotionPlugin, {
         x: 0,
         opacity: 1,
         transition: {
-          delay: 1000,
+          delay: 800,
         },
       },
     },
@@ -30,7 +30,7 @@ app.use(MotionPlugin, {
         x: 0,
         opacity: 1,
         transition: {
-          delay: 1000,
+          delay: 800,
         },
       },
     },
@@ -43,7 +43,7 @@ app.use(MotionPlugin, {
         x: 0,
         opacity: 1,
         transition: {
-          delay: 1400,
+          delay: 1200,
         },
       },
     },
@@ -56,10 +56,24 @@ app.use(MotionPlugin, {
         x: 0,
         opacity: 1,
         transition: {
-          delay: 1400,
+          delay: 1200,
+          
         },
       },
     },
+    "titles": {
+      initial: {
+        opacity: 0,
+      },
+      visible: {
+        opacity: 1,
+        transition: {
+          opacity: {
+            duration: 1000,
+          },
+      },
+    },
+  },
     "small-graph1": {
       initial: {
         scaleY: 0,

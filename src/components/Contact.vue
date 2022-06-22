@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper">
+  <div  v-motion-titles class="wrapper">
     <div class="hero_area">
       <svg
         class="waves"
