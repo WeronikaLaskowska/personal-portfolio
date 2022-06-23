@@ -16,7 +16,7 @@
           ease: 'linear',
         
         },
-      }" class="text-content">
+      }" class="text-content glass px-8 pb-2">
       <h1 class="section-title underline">Hello!</h1>
       <h2>My name is <span class="effect font-bold">Weronika</span></h2>
       <p>I enjoy building and designing things for the web.</p>
@@ -37,7 +37,7 @@
           ease: 'linear',
         
         },
-      }" class="typewriter">
+      }" class="typewriter still-bg glass ">
       <VueWriter :array="arr" />
     </div>
     <div
@@ -134,7 +134,7 @@ export default defineComponent({
   max-width: 220px;
   margin-left: 400px;
   margin-top: 50px;
-  font-weight: 100;
+  font-weight: 200;
   text-align: center;
 }
 
@@ -150,6 +150,10 @@ export default defineComponent({
 }
 .effect:hover {
   letter-spacing: 10px;
+}
+.still-bg{
+  width: 300px;
+  height: 100px;
 }
 .bubble-large,
 .bubble-medium,
