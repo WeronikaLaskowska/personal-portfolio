@@ -57,7 +57,7 @@
         >
           <img
             @click="redirect('ig')"
-            class="logo"
+            class="logo "
             src="./../assets/ig.png"
             alt=""
           />

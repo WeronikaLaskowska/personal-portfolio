@@ -3,8 +3,8 @@ import App from "./App.vue";
 import "./index.css";
 import router from "./router";
 import { MotionPlugin } from "@vueuse/motion";
-
-const app = createApp(App).use(router);
+import VueWriter from "vue-writer";
+const app = createApp(App).use(router).use(VueWriter);
 
 app.use(MotionPlugin, {
   directives: {
@@ -20,6 +20,7 @@ app.use(MotionPlugin, {
           delay: 800,
         },
       },
+      
     },
     "title-right": {
       initial: {
@@ -44,6 +45,19 @@ app.use(MotionPlugin, {
         opacity: 1,
         transition: {
           delay: 1200,
+        },
+      },
+    },
+    "p-left-delay": {
+      initial: {
+        x: -200,
+        opacity: 0,
+      },
+      visible: {
+        x: 0,
+        opacity: 1,
+        transition: {
+          delay: 3200,
         },
       },
     },

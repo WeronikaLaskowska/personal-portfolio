@@ -1,7 +1,9 @@
 <template>
-  <nav class="nav transition-all duration-500 grid place-items-center fixed w-screen z-10">
+  <nav
+    class="nav transition-all duration-500 grid place-items-center fixed w-screen z-10"
+  >
     <div
-      class="header transition-all bg-white duration-500 overflow-visible flex items-center content-center h-16 text-xl rounded-b-twenty opacity-80 pb-2.5 -top-20"
+      class="header transition-all bg-white duration-500 overflow-visible flex items-center content-center h-16 text-xl rounded-b-twenty pb-2.5 -top-20"
     >
       <div
         :class="active === 'home' ? 'active' : ''"
@@ -10,12 +12,15 @@
         <div v-if="active === 'home'">
           <p>Home</p>
         </div>
-        <div class="pic">
+
+        <div @click="(active = 'home'), goto('home')" class="pic">
           <img
-            @click="(active = 'home'), goto('home')"
-            src="./../assets/home.png"
+            v-if="active === 'home'"
+            class="evenout"
+            src="./../assets/home-kopia.png"
             alt=""
           />
+          <img v-else src="./../assets/home.png" alt="" />
         </div>
       </div>
       <div
@@ -25,12 +30,14 @@
         <div v-if="active === 'about'">
           <p>About</p>
         </div>
-        <div class="pic">
+        <div @click="(active = 'about'), goto('about')" class="pic">
           <img
-            @click="(active = 'about'), goto('about')"
-            src="./../assets/user.png"
+            v-if="active === 'about'"
+            class="evenout"
+            src="./../assets/user-kopia.png"
             alt=""
           />
+          <img v-else src="./../assets/user.png" alt="" />
         </div>
       </div>
       <div
@@ -40,12 +47,14 @@
         <div v-if="active === 'edu'">
           <p>Education</p>
         </div>
-        <div class="pic">
+        <div @click="(active = 'edu'), goto('edu')" class="pic">
           <img
-            @click="(active = 'edu'), goto('edu')"
-            src="./../assets/graduation-cap.png"
+            v-if="active === 'edu'"
+            class="evenout"
+            src="./../assets/graduation-cap-kopia.png"
             alt=""
           />
+          <img v-else src="./../assets/graduation-cap.png" alt="" />
         </div>
       </div>
       <div
@@ -55,12 +64,14 @@
         <div v-if="active === 'abi'">
           <p>Abilities</p>
         </div>
-        <div class="pic">
+        <div @click="(active = 'abi'), goto('abi')" class="pic">
           <img
-            @click="(active = 'abi'), goto('abi')"
-            src="./../assets/idea.png"
+            v-if="active === 'abi'"
+            class="evenout"
+            src="./../assets/idea-kopia.png"
             alt=""
           />
+          <img v-else src="./../assets/idea.png" alt="" />
         </div>
       </div>
       <div
@@ -70,12 +81,14 @@
         <div v-if="active === 'proj'">
           <p>Projects</p>
         </div>
-        <div class="pic">
+        <div @click="(active = 'proj'), goto('proj')" class="pic">
           <img
-            @click="(active = 'proj'), goto('proj')"
-            src="./../assets/project-management.png"
+            v-if="active === 'proj'"
+            class="evenout"
+            src="./../assets/project-management-kopia.png"
             alt=""
           />
+          <img v-else src="./../assets/project-management.png" alt="" />
         </div>
       </div>
     </div>
@@ -146,17 +159,23 @@ export default defineComponent({
   height: 35px;
   cursor: pointer;
   opacity: 1;
+  transition: 0.3s all;
+}
+.element img:hover {
+  transform: translateY(-5px);
 }
 .element p {
   font-size: 16px;
 }
-
+.evenout {
+  padding: 2px 0;
+}
 .active {
   transform: translateY(0px);
 }
 .active .pic {
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
-  background: #dcd5dd;
+  background: #ec615b;
   border-radius: 100%;
   padding: 15px;
 }

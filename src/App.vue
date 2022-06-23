@@ -2,12 +2,13 @@
 import Navbar from "./components/Navbar.vue";
 
 export default {
-  components: {Navbar}
-}
+  components: { Navbar },
+};
 </script>
 
 <template>
-  <navbar/>
+  <navbar />
+  <div class="cursor"></div>
   <router-view></router-view>
 </template>
 
@@ -47,64 +48,84 @@ body {
   }
 }
 
-.box-animation{
-  position:relative;
+.box-animation {
+  position: relative;
   width: 500px;
   height: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow:hidden;
+  overflow: hidden;
   border-radius: 20px;
 }
-.box-animation h1{
+.box-animation h1 {
   color: #1d1d1d;
   font-weight: 300;
   position: relative;
   z-index: 10;
 }
-.box-animation::before{
-  content: '';
+.box-animation::before {
+  content: "";
   position: absolute;
   width: 600px;
   height: 120px;
-  background: linear-gradient(90deg, rgba(236,97,91,1) 0%, rgba(82,34,208,1) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(236, 97, 91, 1) 0%,
+    rgba(82, 34, 208, 1) 100%
+  );
   animation: border-animation 4s linear infinite;
-
 }
-.box-animation::after{
-  content: '';
+.box-animation::after {
+  content: "";
   position: absolute;
   background: #fff;
-  inset:4px;
+  inset: 4px;
   border-radius: 16px;
   z-index: 1;
-
 }
 
-
 @keyframes border-animation {
-  0%{
+  0% {
     transform: rotate(0deg);
   }
-  100%{
+  100% {
     transform: rotate(360deg);
   }
 }
-@media screen and (max-width:600px) {
-
-  .box-animation{
+@media screen and (max-width: 600px) {
+  .box-animation {
     width: 300px;
     height: 150px;
   }
-  .box-animation::before{
-    content: '';
+  .box-animation::before {
+    content: "";
     position: absolute;
     width: 400px;
     height: 120px;
-    background: linear-gradient(90deg, rgba(236,97,91,1) 0%, rgba(82,34,208,1) 100%);
+    background: linear-gradient(
+      90deg,
+      rgba(236, 97, 91, 1) 0%,
+      rgba(82, 34, 208, 1) 100%
+    );
     animation: border-animation 4s linear infinite;
-
+  }
+}
+.float {
+  animation: float 6s ease-in-out infinite;
+}
+@keyframes float {
+  0% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
+  50% {
+    box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+    transform: translatey(-20px);
+  }
+  100% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
   }
 }
 </style>

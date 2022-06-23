@@ -21,4 +21,7 @@
     .clickable-red{
       @apply text-brightRed after:bg-brightRed
     }
+    .wiggle{
+      @apply wiggle 1s ease-in-out infinite
+    }
   }

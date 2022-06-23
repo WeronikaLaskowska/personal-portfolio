@@ -41,10 +41,10 @@ export default defineComponent({
       window.open(props.link, '_blank');
     };
     const imgURL = computed(() => {
-      if (props.name === "plan") return "./proj1.png";
-      if (props.name === "ramen") return "./proj.png";
-      if (props.name === "water") return "./proj2.png";
-      if (props.name === "portfolio") return "./proj4.png";
+      if (props.name === "plan") return "./plan.png";
+      if (props.name === "ramen") return "./ramen.png";
+      if (props.name === "water") return "./water.png";
+      if (props.name === "portfolio") return "./port.png";
     });
     const imgUrl = () => {
       return new URL(`../assets/${props.src}`).href;

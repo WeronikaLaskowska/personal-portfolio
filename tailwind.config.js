@@ -17,7 +17,20 @@ module.exports = {
       },
       inset: {
         'boxie': '5%',
-      }
+      },
+      keyframes: {
+        'wiggle': {
+            '0%, 100%': {
+                transform: 'translateY(-3deg)'
+            },
+            '50%': {
+                transform: 'translateY(3deg)'
+            },
+        }
+    },
+    animation: {
+        'wiggle': 'wiggle 1s ease-in-out infinite',
+    }
     },
     borderRadius: {
       'none': '0',
@@ -29,7 +42,19 @@ module.exports = {
       'full': '9999px',
       'large': '12px',
       'twenty': '20px'
-    }
+    },
+    screens: {
+      mini:"480px",
+      sm: "640px",
+      md: "768px",
+      mdLarge: "870px",
+      "1/2lg": "900px",
+      lg: "1024px",
+      "1/2xl": "1160",
+      xl: "1380px",
+      "2xl": "1556px",
+      "4xl": "1864px",
+    },
   },
 
   plugins: [],
