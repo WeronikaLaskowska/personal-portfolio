@@ -1,5 +1,7 @@
 <template>
-  <div class="things w-screen h-full grid place-items-center">
+  <div class="wrapper">
+
+  <div class="things h-full grid place-items-center">
     <div   v-motion
       :initial="{
         y: 1000,
@@ -16,7 +18,7 @@
           ease: 'linear',
         
         },
-      }" class="text-content glass px-8 pb-2">
+      }" class="text-content max-w-fit glass px-6 pb-2 mr-4">
       <h1 class="section-title underline">Hello!</h1>
       <h2>My name is <span class="effect font-bold">Weronika</span></h2>
       <p>I enjoy building and designing things for the web.</p>
@@ -100,6 +102,8 @@
       class="float bubble-small absolute rounded-full"
     ></div>
   </div>
+  </div>
+
 </template>
 <script lang="ts">
 import { useMotion } from "@vueuse/motion";
@@ -119,6 +123,13 @@ export default defineComponent({
 });
 </script>
 <style scoped>
+.wrapper{
+  max-width: 1600px !important;
+  margin:auto;
+  display: grid;
+  place-items:center;
+  position:relative;
+}
 .text-content,
 .typewriter {
   max-width: 600px;
@@ -215,6 +226,11 @@ export default defineComponent({
 }
 
 @media screen and (max-width: 1380px) {
+
+  .wrapper{
+    max-width: 1600px !important;
+    position: static;
+  }
   .bubble-large,
   .bubble-medium,
   .bubble-small {
@@ -237,7 +253,7 @@ export default defineComponent({
     right: 0;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 150px;
+    margin-top: 950px;
   }
   .bubble-large {
     top: 100px;
@@ -255,6 +271,7 @@ export default defineComponent({
 @media screen and (max-width: 750px) {
   .text-content {
     left: 100px;
+    margin-right: 40px;
   }
 }
 @media screen and (max-width: 650px) {
@@ -287,10 +304,11 @@ export default defineComponent({
   }
   .text-content {
     font-size: 62px;
-    left: 120px;
+    left: 20px;
+    margin-right: 20px;
   }
   .typewriter {
-    margin-top: 20px;
+    margin-top: 850px;
     font-size: 21px;
   }
 }
@@ -322,7 +340,7 @@ export default defineComponent({
   }
 
   .typewriter {
-    margin-top: 40px;
+    margin-top: 940px;
     left: 0;
     font-size: 24px;
   }
