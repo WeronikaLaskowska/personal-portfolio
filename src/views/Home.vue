@@ -56,7 +56,7 @@
               ease: 'linear',
             },
           }"
-          class="pic mt-20"
+          class="pic mt-20 "
         >
           <img
             class="profile-pic rounded-full float"
@@ -197,6 +197,10 @@ img {
   .content p {
     font-size: 18px;
     color: #c7dbe6;
+  }
+  .pic{
+    margin-left: -40px;
+    margin-top: -50px;
   }
 }
 </style>

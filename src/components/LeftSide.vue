@@ -1,11 +1,43 @@
 <template>
   <div class="things w-screen h-full grid place-items-center">
-    <div v-motion-p-left-delay class="text-content">
+    <div   v-motion
+      :initial="{
+        y: 1000,
+        opacity: 0,
+      }"
+      :enter="{
+        y: 0,
+        opacity: 1,
+        transition: {
+          delay: 1200,
+          stiffness: 200,
+          damping: 80,
+          mass: 3.5,
+          ease: 'linear',
+        
+        },
+      }" class="text-content">
       <h1 class="section-title underline">Hello!</h1>
       <h2>My name is <span class="effect font-bold">Weronika</span></h2>
       <p>I enjoy building and designing things for the web.</p>
     </div>
-    <div v-motion-p-left-delay class="typewriter">
+    <div   v-motion
+      :initial="{
+        y: 1000,
+        opacity: 0,
+      }"
+      :enter="{
+        y: 0,
+        opacity: 1,
+        transition: {
+          delay: 1200,
+          stiffness: 200,
+          damping: 80,
+          mass: 3.5,
+          ease: 'linear',
+        
+        },
+      }" class="typewriter">
       <VueWriter :array="arr" />
     </div>
     <div
@@ -261,6 +293,7 @@ export default defineComponent({
 @media screen and (max-width: 500px) {
   .text-content {
     left: 40px;
+    margin-right: 50px;
   }
   .bubble-large {
     width: 260px;
@@ -268,11 +301,11 @@ export default defineComponent({
   }
   .bubble-large {
     top: 140px;
-    left: -130px;
+    left: -100px;
   }
   .bubble-medium {
     top: 380px;
-    left: 100px;
+    left: 140px;
   }
   .bubble-medium {
     width: 200px;
@@ -285,9 +318,9 @@ export default defineComponent({
   }
 
   .typewriter {
-    margin-top: 100px;
+    margin-top: 40px;
     left: 0;
-    font-size: 21px;
+    font-size: 24px;
   }
 }
 </style>
