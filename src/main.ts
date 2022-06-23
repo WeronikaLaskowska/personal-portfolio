@@ -57,7 +57,7 @@ app.use(MotionPlugin, {
         x: 0,
         opacity: 1,
         transition: {
-          delay: 1500,
+          delay: 2000,
         },
       },
     },
