@@ -124,7 +124,7 @@ export default defineComponent({
   color: #c7dbe6;
 }
 .profile-pic {
-  border: 40px solid rgbA(199, 219, 230, 0.4);
+  border: 35px solid rgbA(199, 219, 230, 0.4);
   transition: 0.5s;
 }
 .profile-pic:hover {

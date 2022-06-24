@@ -11,7 +11,7 @@
         y: 0,
         opacity: 1,
         transition: {
-          delay: 1200,
+          delay: 1800,
           stiffness: 200,
           damping: 80,
           mass: 3.5,
@@ -32,7 +32,7 @@
         y: 0,
         opacity: 1,
         transition: {
-          delay: 1200,
+          delay: 2000,
           stiffness: 200,
           damping: 80,
           mass: 3.5,

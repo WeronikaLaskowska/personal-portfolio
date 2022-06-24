@@ -58,6 +58,10 @@ app.use(MotionPlugin, {
         opacity: 1,
         transition: {
           delay: 2000,
+          type: 'spring',
+          stiffness: 2020,
+          damping: 810,
+          mass: 3.5,
         },
       },
     },

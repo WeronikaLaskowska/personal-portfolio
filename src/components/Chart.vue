@@ -64,7 +64,6 @@ export default defineComponent({
   width: 40px;
   height: 40px;
   margin-right: 8.3px;
-  object-fit: cover;
 }
 @media screen and (max-width: 800px) {
   .box {
