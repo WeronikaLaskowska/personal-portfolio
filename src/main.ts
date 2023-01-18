@@ -1,11 +1,23 @@
 import { createApp } from "vue";
+import { createI18n } from 'vue-i18n'
 import App from "./App.vue";
 import "./index.css";
 import router from "./router";
 import { MotionPlugin } from "@vueuse/motion";
 import VueWriter from "vue-writer";
+import pl from "./i18n/pl"
+import en from "./i18n/en"
 const app = createApp(App).use(router).use(VueWriter);
-
+const i18n = createI18n({
+  locale: 'en', // set locale
+  fallbackLocale: 'en', // set fallback locale
+  messages:{
+    en:en,
+    pl:pl
+  }, 
+  // something vue-i18n options here ...
+})
+app.use(i18n)
 app.use(MotionPlugin, {
   directives: {
     "title-left": {

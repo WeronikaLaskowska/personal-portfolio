@@ -19,9 +19,9 @@
         
         },
       }" class="text-content max-w-fit glass px-6 pb-2 mr-4">
-      <h1 class="section-title underline">Hello!</h1>
-      <h2>My name is <span class="effect font-bold">Weronika</span></h2>
-      <p>I enjoy building and designing things for the web.</p>
+      <h1 class="section-title underline">{{$t('app.hello')}}</h1>
+      <h2>{{$t('home.myName')}} <span class="effect font-bold">Weronika</span></h2>
+      <p>{{$t('home.about')}}</p>
     </div>
     <div   v-motion
       :initial="{
@@ -114,7 +114,7 @@ export default defineComponent({
     let arr = [
       "FRONT-END DEVELOPER",
       "WEB DESIGNER",
-      "PROGRAMMER",
+      "SOFTWARE ENGINEER",
       "UX/UI DESIGNER",
     ];
 
