@@ -24,7 +24,7 @@
       class="text-unwrapped absolute my-auto left-0 right-0 text-center hidden text-sm"
     >
       <p @click="redirect" class="underline font-bold cursor-pointer red">
-        WATCH
+        {{$t('projects.watch')}}
       </p>
       {{ long }}
     </div>

@@ -23,13 +23,12 @@
     <img src="./../assets/image25.png" alt="" />
     <img src="./../assets/image24.png" alt="" />
     <img src="./../assets/image18.png" alt="" />
+    <img src="./../assets/image7.png" alt="" />
+    <img src="./../assets/image20.png" alt="" />
+    <img src="./../assets/image8.png" alt="" />
+    <img src="./../assets/image5.png" alt="" />
     <img src="./../assets/image9.png" alt="" />
     <img src="./../assets/image19.png" alt="" />
-    <img src="./../assets/image8.png" alt="" />
-    <img src="./../assets/image20.png" alt="" />
-    <img src="./../assets/image5.png" alt="" />
-
-    <img src="./../assets/image7.png" alt="" />
     <img src="./../assets/image4.png" alt="" />
     <img src="./../assets/image3.png" alt="" />
     <img src="./../assets/image6.png" alt="" />
@@ -64,6 +63,7 @@ export default defineComponent({
   width: 40px;
   height: 40px;
   margin-right: 8.3px;
+  object-fit: contain;
 }
 @media screen and (max-width: 800px) {
   .box {

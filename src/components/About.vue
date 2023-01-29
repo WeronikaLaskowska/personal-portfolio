@@ -8,21 +8,17 @@
     >
       <div class="text-section flex flex-col">
         <h1 v-motion-title-left class="title-purple text-center lg:text-left">
-          Who am I?
+          {{ $t("about.title") }}
         </h1>
         <p
           v-motion-p-left
-          class="md:px-20 lg:px-0 text-center lg:text-left px-4 text-lg md:text-xl"
+          class="md:px-20 lg:px-0 text-center lg:text-left px-4 text-lg md:text-xl set-background"
         >
-          My name is Weronika and I am 23 years old. I’m a
-          <span class="font-medium purple"
-            >front-end developer and web designer</span
+          {{ $t("about.aboutMe") }}
+          <span class="font-medium purple">
+            {{ $t("about.aboutMeDistinct") }}</span
           >
-          with an interest for many technologies and with a passion to grow and
-          expand my knowledge in multiple directions. I’m an aspiring full-stack
-          developer with bold plans to also learn some mobile app programming.
-          I’m a person who is very driven and mobilised, focused and determined.
-          When I set a goal for myself, I’m doing my best to achieve it.
+          {{ $t("about.aboutMe2") }}
         </p>
 
         <div v-if="!bigScreen" v-motion-title-left class="img">
@@ -38,18 +34,15 @@
         </div>
 
         <h2 v-motion-title-left class="title-red text-center lg:text-left">
-          After coding
+          {{ $t("about.after") }}
         </h2>
         <p
           v-motion-p-left
-          class="px-4 md:px-20 lg:px-0 text-center lg:text-left text-lg lg:text-xl"
+          class="px-4 md:px-20 lg:px-0 text-center lg:text-left text-lg lg:text-xl set-background"
         >
-          I have a wide variety of
-          <span class="font-medium red">hobbys and interests</span> . After an
-          intense day of coding, my favourite way of relaxing is to play video
-          games! My favourite genre is Japanese RPG. I also love Japanese
-          literature, my favourite author beeing Yukio Mishima. My biggest dream
-          in life is to visit this beautiful country.
+          {{ $t("about.hobbys") }}
+          <span class="font-medium red"> {{ $t("about.hobbysDistinct") }}</span
+          >{{ $t("about.hobbys2") }}
         </p>
         <div
           v-motion-title-left
@@ -57,7 +50,7 @@
         >
           <img
             @click="redirect('ig')"
-            class="logo "
+            class="logo"
             src="./../assets/ig.png"
             alt=""
           />

@@ -1,5 +1,5 @@
 <template>
-  <div  v-motion-titles class="wrapper">
+  <div v-motion-titles class="wrapper">
     <div class="hero_area">
       <svg
         class="waves"
@@ -42,10 +42,9 @@
       class="text-center container overflow-hidden min-w-full max-w-screen min-h-full"
     >
       <div class="grid sm:place-items-center my-20">
-        <h1 class="title">Get in touch!</h1>
+        <h1 class="title">{{ $t("contact.title") }}</h1>
         <p>
-          Please feel free to contact me via all of my socials, or through my
-          email adress:
+          {{ $t("contact.text") }}
           <span @click="mailto" class="clickable clickable-red"
             >laskowska29@gmail.com</span
           >
@@ -61,13 +60,12 @@
 import { defineComponent, ref } from "vue";
 export default defineComponent({
   name: "Abilities",
-  setup(){
-
-    const mailto = ()=>{
+  setup() {
+    const mailto = () => {
       window.location.href = "mailto:laskowska29@gmail.com";
-    }
-    return{mailto}
-  }
+    };
+    return { mailto };
+  },
 });
 </script>
 <style scoped>

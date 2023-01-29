@@ -5,6 +5,13 @@
     <div
       class="header transition-all bg-white duration-500 overflow-visible flex items-center content-center h-16 text-xl rounded-b-twenty pb-2.5 -top-20"
     >
+      <div class="language-switch pl-2 pt-2">
+        <span :class="lang === 'pl' ? 'red font-bold text-2xl' : ''" @click="changeLang('pl')"
+          >PL</span
+        >/<span :class="lang === 'en' ? 'red font-bold text-2xl' : ''" @click="changeLang('en')"
+          >EN</span
+        >
+      </div>
       <div
         :class="active === 'home' ? 'active' : ''"
         class="element flex items-center content-center flex-col"
@@ -17,7 +24,7 @@
           <img
             v-if="active === 'home'"
             class="evenout"
-            src="./../assets/home-kopia.png"
+            src="./../assets/home-white.png"
             alt=""
           />
           <img v-else src="./../assets/home.png" alt="" />
@@ -34,7 +41,7 @@
           <img
             v-if="active === 'about'"
             class="evenout"
-            src="./../assets/user-kopia.png"
+            src="./../assets/user-white.png"
             alt=""
           />
           <img v-else src="./../assets/user.png" alt="" />
@@ -51,10 +58,10 @@
           <img
             v-if="active === 'edu'"
             class="evenout"
-            src="./../assets/graduation-cap-kopia.png"
+            src="./../assets/student-white.png"
             alt=""
           />
-          <img v-else src="./../assets/graduation-cap.png" alt="" />
+          <img v-else src="./../assets/student.png" alt="" />
         </div>
       </div>
       <div
@@ -104,6 +111,7 @@ export default defineComponent({
   setup() {
     let lastScrollTop = 0;
     let active = ref("about");
+    let lang = ref(window.localStorage.getItem("lan"));
     window.addEventListener("scroll", function (e) {
       let scrollTop = this.document.documentElement.scrollTop;
       let mobile = window.innerWidth < 800 ? 1.6 : 0;
@@ -141,7 +149,11 @@ export default defineComponent({
         behavior: "smooth",
       });
     };
-    return { active, goto };
+    const changeLang = (lan) => {
+      window.localStorage.setItem("lan", lan);
+      window.location.reload()
+    };
+    return { active, goto, changeLang, lang };
   },
 });
 </script>
@@ -151,7 +163,7 @@ export default defineComponent({
   top: -180px;
 }
 .header {
-  width: 500px;
+  width: 600px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .element img {
@@ -199,5 +211,20 @@ export default defineComponent({
   .active .pic {
     padding: 5px;
   }
+}
+.language-switch {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid rgb(221, 219, 219);
+  padding-right: 10px;
+  margin-top: 4px;
+  padding-left: 10px;
+}
+.language-switch span {
+  cursor: pointer;
+  padding: 0 5px;
+  transition: .6s all;
 }
 </style>

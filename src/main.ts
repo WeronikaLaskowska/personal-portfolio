@@ -9,7 +9,7 @@ import pl from "./i18n/pl"
 import en from "./i18n/en"
 const app = createApp(App).use(router).use(VueWriter);
 const i18n = createI18n({
-  locale: 'en', // set locale
+  locale: window.localStorage.getItem('lan') as string, // set locale
   fallbackLocale: 'en', // set fallback locale
   messages:{
     en:en,
@@ -193,7 +193,7 @@ app.use(MotionPlugin, {
         scaleY: 0,
       },
       visible: {
-        scaleY: 42,
+        scaleY: 55,
         transition: {
           duration: 2000,
           ease: "linear",
@@ -205,7 +205,7 @@ app.use(MotionPlugin, {
         scaleY: 0,
       },
       visible: {
-        scaleY: 50,
+        scaleY: 65,
         transition: {
           duration: 2000,
           ease: "linear",
@@ -217,7 +217,7 @@ app.use(MotionPlugin, {
         scaleY: 0,
       },
       visible: {
-        scaleY: 60,
+        scaleY: 70,
         transition: {
           duration: 2000,
           ease: "linear",

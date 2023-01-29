@@ -1,8 +1,16 @@
 <script lang="ts">
+import { onMounted } from "@vue/runtime-core";
 import Navbar from "./components/Navbar.vue";
 
 export default {
   components: { Navbar },
+  setup() {
+    onMounted(() => {
+      if (!window.localStorage.getItem("lan")) {
+        window.localStorage.setItem("lan", "pl");
+      }
+    });
+  },
 };
 </script>
 
@@ -136,5 +144,14 @@ body {
     box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
     transform: translatey(0px);
   }
+}
+
+.set-background {
+  background: #fff;
+  padding: 25px 20px !important;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
 }
 </style>
