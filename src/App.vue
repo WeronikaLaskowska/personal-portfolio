@@ -8,6 +8,7 @@ export default {
     onMounted(() => {
       if (!window.localStorage.getItem("lan")) {
         window.localStorage.setItem("lan", "pl");
+        window.location.reload()
       }
     });
   },

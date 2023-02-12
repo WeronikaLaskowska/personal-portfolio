@@ -161,6 +161,7 @@ export default defineComponent({
 <style scoped>
 .nav {
   top: -180px;
+  z-index: 99999;
 }
 .header {
   width: 600px;
