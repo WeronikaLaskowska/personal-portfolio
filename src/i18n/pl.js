@@ -13,8 +13,8 @@ export default {
     after: "Czas wolny",
     hobbys: "Mam różne  ",
     hobbys2:
-      "Po ciężkim dniu pracy moim ulubionym sposobem, aby się zrelaksować jest granie w gry video! Moim ulubionym gatunkiem jest Japoński RPG. Lubię również Japońską literaturę, mój ulubiony autor to Haruki Murakami. Moim największym marzeniem jest podróż do tego kraju.",
-    hobbysDistinct: "hobby i zainteresowania.",
+      "Po ciężkim dniu pracy moim ulubionym sposobem, aby się zrelaksować jest granie w gry video! Moim ulubionym gatunkiem jest Japoński RPG. Lubię również literaturę, mój ulubiony autor to James Frey. Moim największym marzeniem jest podróż do tego kraju.",
+    hobbysDistinct: "hobby i zainteresowania. ",
   },
   edu: {
     title: "Edukacja",
@@ -54,6 +54,17 @@ export default {
       description:
         "Moja stara strona portfolio stworzona około pół roku temu. Zobacz mój progress!",
     },
+    game:{
+      title:"Strona internetowa - Game Center",
+      tools:"Vue 3.0 - Pinia - CSS - Typescript",
+      description:"Strona z aktualnie popularnymi grami video. Wykorzystałam do jej utworzenia darmowe OpenCritic API. Strona wykonana przy użyciu frameworka Vue.js. Store management - Pinia."
+    },
+    tictac:{
+      title:"Kółko i krzyżyk - Gra",
+      tools:"Vue 3.0 - CSS",
+      description:"Prosta gra w kółko i krzyżyk w neonowej stylistyce. "
+    },
+
   },
   contact: {
     title: "Skontaktuj się!",

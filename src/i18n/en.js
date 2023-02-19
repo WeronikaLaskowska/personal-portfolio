@@ -13,7 +13,7 @@ export default {
     hobbys: "I have a wide variety of ",
     hobbysDistinct: "hobbys and interests.",
     hobbys2:
-      "After an intense day of coding, my favourite way of relaxing is to play video games! My favourite genre is Japanese RPG. I also love Japanese literature, my favourite author beeing Haruki Murakami. My biggest dream in life is to visit this country.",
+      "After an intense day of coding, my favourite way of relaxing is to play video games! My favourite genre is Japanese RPG. I also love literature, my favourite author beeing James Frey. My biggest dream in life is to visit this country.",
   },
   edu: {
     title: "Education",
@@ -53,6 +53,17 @@ export default {
       description:
         "My old portfolio website made about 6 months ago. Check out my progress!",
     },
+
+ game:{
+  title:"Website - Game Center",
+  tools:"Vue 3.0 - Pinia - CSS - Typescript",
+  description:"Website with currently popular video games. Displaying data about them and their reviews. I used a free API by OpenCritic to make it. Made using Vue.js and Pinia for store management. "
+},
+tictac:{
+  title:"Tic Tac Toe - Game",
+  tools:"Vue 3.0 - CSS",
+  description:"Simple tic tac toe game in neon styling. "
+},
   },
   contact: {
     title: "Get in touch!",

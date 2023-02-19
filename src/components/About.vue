@@ -48,12 +48,20 @@
           v-motion-title-left
           class="logos sm:px-40 lg:px-0 grid place-items-center grid-cols-3 ml-10 lg:flex"
         >
-          <img
-            @click="redirect('ig')"
-            class="logo"
-            src="./../assets/ig.png"
-            alt=""
-          />
+          <a v-if="lang === 'pl'" download href="./cv_pl.pdf">
+            <img
+              class="logo"
+              src="./../assets/resume.png"
+              alt=""
+            />
+          </a>
+          <a v-else download href="./cv_en.pdf">
+            <img
+              class="logo"
+              src="./../assets/resume.png"
+              alt=""
+            />
+          </a>
 
           <img
             @click="redirect('git')"
@@ -88,6 +96,7 @@ export default defineComponent({
   name: "About",
   setup() {
     const bigScreen = ref(true);
+    const lang = ref(window.localStorage.getItem('lan'))
     if (window.innerWidth > 766) bigScreen.value = true;
     else bigScreen.value = false;
 
@@ -99,9 +108,9 @@ export default defineComponent({
           "https://pl.linkedin.com/in/weronika-laskowska-808382219",
           "_blank"
         );
-      if (to === "ig") location.href = "https://seniorapp.pl/";
+    
     };
-    return { bigScreen, redirect };
+    return { bigScreen, redirect, lang };
   },
 });
 </script>

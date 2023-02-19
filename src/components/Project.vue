@@ -45,6 +45,8 @@ export default defineComponent({
       if (props.name === "ramen") return "./ramen.png";
       if (props.name === "water") return "./water.png";
       if (props.name === "portfolio") return "./port.png";
+      if (props.name === "game") return "./game.png";
+      if (props.name === "tictac") return "./tictac.png";
     });
     const imgUrl = () => {
       return new URL(`../assets/${props.src}`).href;

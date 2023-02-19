@@ -41,6 +41,22 @@
           :link="'https://elegant-ride-b1d89d.netlify.app/'"
           :long="$t('projects.portfolio.description')"
         />
+        <project
+          v-motion-title-left
+          :title="$t('projects.game.title')"
+          :stack="$t('projects.game.tools')"
+          :name="'game'"
+          :link="'https://game-center-popular-now.netlify.app/'"
+          :long="$t('projects.game.description')"
+        />
+        <project
+          v-motion-title-right
+          :title="$t('projects.tictac.title')"
+          :stack="$t('projects.tictac.tools')"
+          :name="'tictac'"
+          :link="'https://tictactoegamewl.netlify.app/'"
+          :long="$t('projects.tictac.description')"
+        />
       </div>
     </div>
   </div>
