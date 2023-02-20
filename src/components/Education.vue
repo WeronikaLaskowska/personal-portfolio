@@ -135,4 +135,9 @@ export default defineComponent({
 .big-image{
   max-width: 600px;
 }
+@media screen and (max-width:700px) {
+  .big-image{
+  max-width: 90vw;
+}
+}
 </style>

@@ -107,6 +107,9 @@ body {
     width: 300px;
     height: 150px;
   }
+  .box-animation h1 {
+  font-size: 38px;
+}
   .box-animation::before {
     content: "";
     position: absolute;

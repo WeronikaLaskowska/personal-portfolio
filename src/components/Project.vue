@@ -24,7 +24,7 @@
       class="text-unwrapped absolute my-auto left-0 right-0 text-center hidden text-sm"
     >
       <p @click="redirect" class="underline font-bold cursor-pointer red">
-        {{$t('projects.watch')}}
+        {{ $t("projects.watch") }}
       </p>
       {{ long }}
     </div>
@@ -38,7 +38,7 @@ export default defineComponent({
   props: ["src", "title", "link", "long", "stack", "name"],
   setup(props) {
     const redirect = () => {
-      window.open(props.link, '_blank');
+      window.open(props.link, "_blank");
     };
     const imgURL = computed(() => {
       if (props.name === "plan") return "./plan.png";
@@ -80,5 +80,10 @@ export default defineComponent({
 .text-unwrapped {
   top: 63%;
   padding: 2px 10px;
+}
+@media screen and (max-width: 650px) {
+  .card:hover {
+    height: 580px;
+  }
 }
 </style>
