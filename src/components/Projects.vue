@@ -33,14 +33,14 @@
           :link="'https://cranky-ardinghelli-d6e42b.netlify.app/'"
           :long="$t('projects.ramen.description')"
         />
-        <project
+        <!-- <project
           v-motion-title-right
           :title="$t('projects.portfolio.title')"
           :stack="$t('projects.portfolio.tools')"
           :name="'portfolio'"
           :link="'https://elegant-ride-b1d89d.netlify.app/'"
           :long="$t('projects.portfolio.description')"
-        />
+        /> -->
         <project
           v-motion-title-left
           :title="$t('projects.game.title')"
@@ -49,14 +49,14 @@
           :link="'https://game-center-popular-now.netlify.app/'"
           :long="$t('projects.game.description')"
         />
-        <project
+        <!-- <project
           v-motion-title-right
           :title="$t('projects.tictac.title')"
           :stack="$t('projects.tictac.tools')"
           :name="'tictac'"
           :link="'https://tictactoegamewl.netlify.app/'"
           :long="$t('projects.tictac.description')"
-        />
+        /> -->
       </div>
     </div>
   </div>

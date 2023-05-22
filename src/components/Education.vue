@@ -17,7 +17,7 @@
           {{ $t("edu.title") }}
         </h1>
         <p
-        v-if="lang === 'en'"
+          v-if="lang === 'en'"
           v-motion-p-right
           class="md:px-20 lg:px-0 text-center lg:text-right px-4 text-lg lg:text-xl set-background"
         >
@@ -44,7 +44,7 @@
           {{ $t("edu.education").substring(327, 440) }}
         </p>
         <p
-        v-if="lang === 'pl'"
+          v-if="lang === 'pl'"
           v-motion-p-right
           class="md:px-20 lg:px-0 text-center lg:text-right px-4 text-lg lg:text-xl set-background"
         >
@@ -85,14 +85,16 @@
             >Sysmo.pl</span
           >:
           <span class="font-light red"
-            >{{ $t("app.december") }} 2021 - {{ $t("app.january") }} 2023<br
+            >{{ $t("app.december") }} 2021 - {{ $t("app.present") }}<br
           /></span>
           {{ $t("edu.work") }}
           <span @click="redirect('senior')" class="clickable clickable-red"
             >SeniorApp</span
           >
           {{ $t("app.and") }}
-          <span @click="redirect('exposo')" class="clickable clickable-red">Exposo.pl</span>.
+          <span @click="redirect('exposo')" class="clickable clickable-red"
+            >Exposo.pl</span
+          >.
         </p>
       </div>
     </div>
@@ -132,12 +134,12 @@ export default defineComponent({
   max-width: 1680px;
   margin: auto;
 }
-.big-image{
+.big-image {
   max-width: 600px;
 }
-@media screen and (max-width:700px) {
-  .big-image{
-  max-width: 90vw;
-}
+@media screen and (max-width: 700px) {
+  .big-image {
+    max-width: 90vw;
+  }
 }
 </style>

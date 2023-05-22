@@ -54,17 +54,17 @@ export default {
       description:
         "Moja stara strona portfolio stworzona około pół roku temu. Zobacz mój progress!",
     },
-    game:{
-      title:"Strona internetowa - Game Center",
-      tools:"Vue 3.0 - Pinia - CSS - Typescript",
-      description:"Strona z aktualnie popularnymi grami video. Wykorzystałam do jej utworzenia darmowe OpenCritic API. Strona wykonana przy użyciu frameworka Vue.js. Store management - Pinia."
+    game: {
+      title: "Strona internetowa - Game Center",
+      tools: "Vue 3.0 - Pinia - CSS - Typescript",
+      description:
+        "Strona z aktualnie popularnymi grami video. Wykorzystałam do jej utworzenia darmowe OpenCritic API. Strona wykonana przy użyciu frameworka Vue.js. Store management - Pinia.",
     },
-    tictac:{
-      title:"Kółko i krzyżyk - Gra",
-      tools:"Vue 3.0 - CSS",
-      description:"Prosta gra w kółko i krzyżyk w neonowej stylistyce. "
+    tictac: {
+      title: "Kółko i krzyżyk - Gra",
+      tools: "Vue 3.0 - CSS",
+      description: "Prosta gra w kółko i krzyżyk w neonowej stylistyce. ",
     },
-
   },
   contact: {
     title: "Skontaktuj się!",
@@ -76,5 +76,6 @@ export default {
     january: "Styczeń",
     soFar: "póki co",
     hello: "Witaj!",
+    present: "Teraz",
   },
 };
