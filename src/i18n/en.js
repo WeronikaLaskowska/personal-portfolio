@@ -13,7 +13,7 @@ export default {
     hobbys: "I have a wide variety of ",
     hobbysDistinct: "hobbys and interests.",
     hobbys2:
-      " After an intense day of coding, my favourite way of relaxing is to play video games! My favourite genre is Japanese RPG. I also love literature, my favourite author beeing James Frey. My biggest dream in life is to visit this country.",
+      " After an intense day of coding, my favourite way of relaxing is to play video games. My favourite genre is Japanese RPG. My biggest dream in life is to visit this country.",
   },
   edu: {
     title: "Education",

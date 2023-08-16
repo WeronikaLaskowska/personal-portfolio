@@ -13,7 +13,7 @@ export default {
     after: "Czas wolny",
     hobbys: "Mam różne  ",
     hobbys2:
-      "Po ciężkim dniu pracy moim ulubionym sposobem, aby się zrelaksować jest granie w gry video! Moim ulubionym gatunkiem jest Japoński RPG. Lubię również literaturę, mój ulubiony autor to James Frey. Moim największym marzeniem jest podróż do tego kraju.",
+      "Po ciężkim dniu pracy moim ulubionym sposobem, aby się zrelaksować jest granie w gry video! Moim ulubionym gatunkiem jest Japoński RPG. Moim największym marzeniem jest podróż do tego kraju.",
     hobbysDistinct: "hobby i zainteresowania. ",
   },
   edu: {

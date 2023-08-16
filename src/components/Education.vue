@@ -93,7 +93,7 @@
           >
           {{ $t("app.and") }}
           <span @click="redirect('exposo')" class="clickable clickable-red"
-            >Exposo.pl</span
+            >Logiplanner.eu</span
           >.
         </p>
       </div>
@@ -112,7 +112,7 @@ export default defineComponent({
       if (to === "sysmo") window.open("https://sysmo.pl/", "_blank");
       if (to === "uni") window.open("https://www.uni.lodz.pl/", "_blank");
       if (to === "senior") window.open("https://seniorapp.pl/", "_blank");
-      if (to === "exposo") window.open("https://exposo.pl/", "_blank");
+      if (to === "exposo") window.open("https://https://www.logiplanner.eu/", "_blank");
     };
     return { redirect, lang };
   },
