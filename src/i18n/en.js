@@ -2,6 +2,8 @@ export default {
   home: {
     myName: "My name is",
     about: "I enjoy building and designing things for the web.",
+          hello:"Hello!",
+      intro:"Nazywam się Weronika i jestem front-end developerem z doświadczeniem. Zajmuję się głównie tworzeniem stron internetowych oraz aplikacji webowych, jednak mam równiez doświadczenie w technologiach mobilnych. Jeśli chcesz dowiedzieć się więcej, scrolluj."
   },
   about: {
     title: "Who am I?",
@@ -33,7 +35,7 @@ export default {
       title: "Web App - Plan Organiser",
       tools: "Vue 2.0 - Vue Router - Firebase",
       description:
-        "Web app created for my university thesis. It was created for teachers and employees of primary and secondary schools. Its aim is to facilitate the activities of creating a lesson plan.Plan Organiser is a web tool written in JavaScript, using the Vue.js framework.",
+        "Plan Organiser is a web app developed for my university thesis. Designed for teachers and school staff, it simplifies lesson planning. Built with JavaScript and the Vue.js framework.",
     },
     water: {
       title: "Website - Save Water",

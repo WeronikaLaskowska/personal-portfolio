@@ -4,9 +4,25 @@
     class="container overflow-hidden min-w-full max-w-screen min-h-full"
   >
     <div class="grid place-items-center gap-36 mt-12 py-12 pb-20">
-      <div v-motion-titles class="box-animation">
-        <h1 class="title-red title-animated">{{ $t("projects.title") }}</h1>
-      </div>
+      <!-- <h1 v-motion-title-left class="title">{{ $t("projects.title") }}</h1> -->
+      <h1 v-motion-title-left class="title">
+        {{ $t("projects.title") }}
+        <svg
+          class="title-underline"
+          width="100%"
+          height="15"
+          viewBox="0 0 100 15"
+          preserveAspectRatio="none"
+        >
+          <path
+            class="path"
+            d="M0,5 Q25,0 50,5 T100,5"
+            stroke="#fff"
+            stroke-width="4"
+            fill="none"
+          />
+        </svg>
+      </h1>
 
       <div class="grid gap-20 grid-cols-1 lg:grid-cols-2 place-items-center">
         <project
@@ -74,5 +90,46 @@ export default defineComponent({
 <style scoped>
 .container {
   background: #ffdedd !important;
+}
+.title {
+  color: black;
+  font-size: 128px;
+  text-align: center;
+}
+.title-underline {
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  overflow: visible;
+}
+
+.path {
+  stroke-dasharray: 120;
+  stroke-dashoffset: 120;
+  animation: draw 1.5s forwards 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Dodaj ten fragment, aby podkreślenie było responsywne */
+@media screen and (max-width: 1000px) {
+  .title-underline {
+    bottom: -8px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .title-underline {
+    bottom: -6px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .title-underline {
+    bottom: -5px;
+  }
 }
 </style>

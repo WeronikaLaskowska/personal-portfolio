@@ -3,6 +3,8 @@ export default {
     myName: "Nazywam się",
     about:
       "Moją pasja jest tworzenie i projektowanie przeróżnych rzeczy w internecie.",
+      hello:"Cześć!",
+      intro:"Nazywam się Weronika i jestem front-end developerem z doświadczeniem. Zajmuję się głównie tworzeniem stron internetowych oraz aplikacji webowych, jednak mam równiez doświadczenie w technologiach mobilnych. Jeśli chcesz dowiedzieć się więcej, scrolluj."
   },
   about: {
     title: "Kim jestem?",

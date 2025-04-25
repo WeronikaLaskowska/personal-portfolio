@@ -1,72 +1,5 @@
 <template>
-  <div
-    id="home"
-    class="container min-h-screen w-screen min-w-full bg-dark overflow-hidden"
-  >
-    <div class="content grid place-items-center">
-      <bubbles />
-      <div
-        class="md:min-h-screen h-full min-w-screen flex flex-col items-center content-center xl:place-items-center xl:grid xl:grid-cols-2"
-      >
-        <!-- <div
-        v-motion
-        :initial="{
-          x: -100,
-          opacity: 0,
-        }"
-        :enter="{
-          x: 0,
-          opacity: 1,
-          transition: {
-            delay: 2000,
-            type: 'spring',
-            stiffness: 200,
-            damping: 80,
-            mass: 1.5,
-          },
-        }"
-        class="text mb-12 ml-12"
-      >
-        <h1 class="title font-medium underline underline-offset-16">
-          Welcome!
-        </h1>
-        <p class="font-light">
-          Welcome to my personal portfolio website. My name is Weronika. I
-          love<span class="font-bold"> building and designing websites </span>
-          and my dream is to grow in this direction, learn more and become the
-          best that I can be.
-        </p>
-      </div> -->
-        <div class="bubblez">
-          <LeftSide />
-        </div>
-
-        <div
-          v-motion
-          :initial="{
-            opacity: 0,
-          }"
-          :enter="{
-            opacity: 1,
-            transition: {
-              delay: 1500,
-              stiffness: 200,
-              damping: 80,
-              mass: 3.5,
-              ease: 'linear',
-            },
-          }"
-          class="pic mt-20 "
-        >
-          <img
-            class="profile-pic rounded-full float"
-            src="./../assets/me.jpg"
-            alt=""
-          />
-        </div>
-      </div>
-    </div>
-  </div>
+  <landing />
   <about />
   <education />
   <abilities />
@@ -84,6 +17,7 @@ import Abilities from "../components/Abilities.vue";
 import Projects from "../components/Projects.vue";
 import Contact from "../components/Contact.vue";
 import LeftSide from "../components/LeftSide.vue";
+import Landing from "../components/Landing.vue";
 export default defineComponent({
   name: "Home",
   components: {
@@ -95,6 +29,7 @@ export default defineComponent({
     Projects,
     Contact,
     LeftSide,
+    Landing
   },
 });
 </script>
@@ -198,7 +133,7 @@ img {
     font-size: 18px;
     color: #c7dbe6;
   }
-  .pic{
+  .pic {
     margin-left: -40px;
     margin-top: -50px;
   }

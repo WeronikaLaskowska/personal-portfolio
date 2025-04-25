@@ -1,10 +1,10 @@
 <template>
   <div
     id="edu"
-    class="container min-w-full min-h-full grid place-items-center lg:min-h-screen overflow-hidden max-w-screen"
+    class="container min-w-full min-h-full pb-20 grid place-items-center  overflow-hidden max-w-screen"
   >
     <div
-      class="content py-12 flex flex-col lg:grid lg:grid-cols-2 lg:place-items-center lg:px-12 lg:py-8"
+      class="content py-12 pb-[200px] flex flex-col lg:grid lg:grid-cols-2 lg:place-items-center lg:px-12 "
     >
       <div
         v-motion-title-left
@@ -19,7 +19,7 @@
         <p
           v-if="lang === 'en'"
           v-motion-p-right
-          class="md:px-20 lg:px-0 text-center lg:text-right px-4 text-lg lg:text-xl set-background"
+          class="md:px-20 lg:px-0 text-center lg:text-right px-4 text-md lg:text-md set-background"
         >
           {{ $t("edu.education").substring(0, 29) }}
           <span @click="redirect('uni')" class="clickable">{{
@@ -46,7 +46,7 @@
         <p
           v-if="lang === 'pl'"
           v-motion-p-right
-          class="md:px-20 lg:px-0 text-center lg:text-right px-4 text-lg lg:text-xl set-background"
+          class="md:px-20 lg:px-0 text-center lg:text-right px-4 text-md lg:text-md set-background"
         >
           {{ $t("edu.education").substring(0, 35) }}
           <span @click="redirect('uni')" class="clickable">{{
@@ -79,7 +79,7 @@
         </h2>
         <p
           v-motion-p-right
-          class="px-4 md:px-20 lg:px-0 text-center lg:text-right text-lg lg:text-xl set-background"
+          class="px-4 md:px-20 lg:px-0 text-center lg:text-right text-md lg:text-md set-background"
         >
           <span @click="redirect('sysmo')" class="clickable clickable-red"
             >Sysmo.pl</span
@@ -120,12 +120,8 @@ export default defineComponent({
 </script>
 <style scoped>
 .container {
-  background: rgb(255, 255, 255);
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 1) 50%,
-    rgba(211, 202, 213, 1) 92%
-  ) !important;
+  background: #FFEEEE;
+  background: linear-gradient(0deg,rgba(255, 238, 238, 1) 0%, rgba(255, 255, 255, 1) 100%) !important;
 }
 .logo:hover {
   transform: translateY(-10px);

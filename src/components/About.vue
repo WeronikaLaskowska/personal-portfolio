@@ -1,7 +1,7 @@
 <template>
   <div
     id="about"
-    class="container overflow-hidden min-w-full max-w-screen min-h-full lg:min-h-screen"
+    class="container overflow-hidden min-w-full max-w-screen  "
   >
     <div
       class="content flex flex-col lg:grid lg:grid-cols-2 lg:place-items-center lg:px-12 lg:py-8 pt-20"
@@ -12,7 +12,7 @@
         </h1>
         <p
           v-motion-p-left
-          class="md:px-20 lg:px-0 text-center lg:text-left px-4 text-lg md:text-xl set-background"
+          class="md:px-20 lg:px-0 text-center lg:text-left px-4 text-md  set-background"
         >
           {{ $t("about.aboutMe") }}
           <span class="font-medium purple">
@@ -38,7 +38,7 @@
         </h2>
         <p
           v-motion-p-left
-          class="px-4 md:px-20 lg:px-0 text-center lg:text-left text-lg lg:text-xl set-background"
+          class="px-4 md:px-20 lg:px-0 text-center lg:text-left text-md lg:text-md set-background"
         >
           {{ $t("about.hobbys") }}
           <span class="font-medium red"> {{ $t("about.hobbysDistinct") }}</span
@@ -49,18 +49,10 @@
           class="logos sm:px-40 lg:px-0 grid place-items-center grid-cols-3 ml-10 lg:flex"
         >
           <a v-if="lang === 'pl'" download href="./cv_pl.pdf">
-            <img
-              class="logo"
-              src="./../assets/resume.png"
-              alt=""
-            />
+            <img class="logo" src="./../assets/resume.png" alt="" />
           </a>
           <a v-else download href="./cv_en.pdf">
-            <img
-              class="logo"
-              src="./../assets/resume.png"
-              alt=""
-            />
+            <img class="logo" src="./../assets/resume.png" alt="" />
           </a>
 
           <img
@@ -96,7 +88,7 @@ export default defineComponent({
   name: "About",
   setup() {
     const bigScreen = ref(true);
-    const lang = ref(window.localStorage.getItem('lan'))
+    const lang = ref(window.localStorage.getItem("lan"));
     if (window.innerWidth > 766) bigScreen.value = true;
     else bigScreen.value = false;
 
@@ -108,7 +100,6 @@ export default defineComponent({
           "https://pl.linkedin.com/in/weronika-laskowska-808382219",
           "_blank"
         );
-    
     };
     return { bigScreen, redirect, lang };
   },
@@ -116,14 +107,8 @@ export default defineComponent({
 </script>
 <style scoped>
 .container {
-  background: rgb(7, 17, 8);
-  background: linear-gradient(
-    180deg,
-    rgba(7, 17, 8, 0.5396752450980392) 0%,
-    rgba(220, 213, 221, 1) 9%,
-    rgba(239, 235, 239, 1) 55%,
-    rgba(255, 255, 255, 1) 100%
-  ) !important;
+  background: #FFEEEE !important;
+background: linear-gradient(180deg,rgba(255, 238, 238, 1) 0%, rgba(255, 255, 255, 1) 100%) !important;
 }
 .content {
   max-width: 1680px;

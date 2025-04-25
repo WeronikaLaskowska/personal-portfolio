@@ -3,18 +3,33 @@
     id="abi"
     class="container overflow-hidden min-w-full max-w-screen min-h-full"
   >
-    <div class="grid sm:place-items-center my-20">
-      <div v-motion-titles class="box-animation mb-12 ml-12 sm:ml-0">
-        <h1 class="title-purple-edu ml-4 lg:ml-0">
-          {{ $t("abilities.title") }}
-        </h1>
-      </div>
+    <div class="grid place-items-center my-20">
+   
+      <h1 v-motion-title-left class="title">
+        {{ $t("abilities.title") }}
+        <svg
+          class="title-underline"
+          width="100%"
+          height="15"
+          viewBox="0 0 100 15"
+          preserveAspectRatio="none"
+        >
+          <path
+            class="path"
+            d="M0,5 Q25,0 50,5 T100,5"
+            stroke="#ffc6c6"
+            stroke-width="4"
+            fill="none"
+          />
+        </svg>
+      </h1>
+      <!-- <h1 v-motion-title-left class="title">{{ $t("abilities.title") }}</h1> -->
 
-      <div v-motion-titles class="learning flex ml-20 sm:ml-6 lg:ml-0">
+      <!-- <div v-motion-titles class="learning flex ml-20 sm:ml-6 lg:ml-0">
         <div class="box mr-4"></div>
         <p>- {{ $t("abilities.learning") }}</p>
-      </div>
-      <div class="py-12">
+      </div> -->
+      <div class="py-12 mt-[70px] pb-[100px]">
         <chart />
       </div>
     </div>
@@ -75,13 +90,18 @@ export default defineComponent({
 </script>
 <style scoped>
 .container {
-  background: rgb(191, 177, 193);
+  background: #ffeeee !important;
   background: linear-gradient(
     180deg,
-    rgba(191, 177, 193, 1) 0%,
-    rgba(255, 255, 255, 1) 44%,
-    rgba(255, 255, 255, 1) 85%
+    rgba(255, 238, 238, 1) 0%,
+    rgba(255, 255, 255, 1) 100%
   ) !important;
+}
+.title {
+  color: black;
+  font-size: 128px;
+  text-align: left;
+  padding-left: 20px;
 }
 
 .box {
@@ -128,6 +148,44 @@ export default defineComponent({
 .parallax > use:nth-child(4) {
   animation-delay: -5s;
   animation-duration: 20s;
+}
+.title-underline {
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  overflow: visible;
+  padding-left: 20px;
+
+}
+
+.path {
+  stroke-dasharray: 120;
+  stroke-dashoffset: 120;
+  animation: draw 1.5s forwards 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Dodaj ten fragment, aby podkreślenie było responsywne */
+@media screen and (max-width: 1000px) {
+  .title-underline {
+    bottom: -8px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .title-underline {
+    bottom: -6px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .title-underline {
+    bottom: -5px;
+  }
 }
 
 @keyframes move-forever {
