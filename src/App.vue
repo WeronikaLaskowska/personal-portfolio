@@ -56,6 +56,15 @@ body {
     font-size: 45px;
   }
 }
+@media screen and (max-width: 700px) {
+  .title-red {
+    font-size: 35px;
+  }
+  .title-purple {
+    font-size: 45px;
+  }
+ 
+}
 
 .box-animation {
   position: relative;

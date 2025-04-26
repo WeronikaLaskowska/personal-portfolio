@@ -6,9 +6,9 @@
       class="header transition-all bg-white duration-500 overflow-visible flex items-center content-center h-16 text-xl rounded-b-twenty pb-2.5 -top-20"
     >
       <div class="language-switch pl-2 pt-2">
-        <span :class="lang === 'pl' ? 'red font-bold text-2xl' : ''" @click="changeLang('pl')"
+        <span :class="lang === 'pl' ? 'red font-bold text-sm md:text-2xl' : 'text-sm md:text-2xl'" @click="changeLang('pl')"
           >PL</span
-        >/<span :class="lang === 'en' ? 'red font-bold text-2xl' : ''" @click="changeLang('en')"
+        >/<span :class="lang === 'en' ? 'red font-bold text-sm md:text-2xl' : 'text-sm md:text-2xl'" @click="changeLang('en')"
           >EN</span
         >
       </div>
@@ -27,7 +27,7 @@
             src="./../assets/home-white.png"
             alt=""
           />
-          <img v-else src="./../assets/home.png" alt="" />
+          <img v-else src="./../assets/home.png" class="w-[25px] max-w-[25px] min-w-[25px]" alt="" />
         </div>
       </div>
       <div
@@ -145,6 +145,10 @@ export default defineComponent({
       lastScrollTop = scrollTop;
     });
     const goto = (refName) => {
+      // if(refName === "home"){
+      //   document.scrollIntoView(0)
+      //   return;
+      // }
       document.getElementById(refName).scrollIntoView({
         behavior: "smooth",
       });
@@ -192,6 +196,7 @@ export default defineComponent({
   border-radius: 100%;
   padding: 15px;
 }
+
 
 @media screen and (max-width: 550px) {
   .header {

@@ -152,42 +152,6 @@ app.use(MotionPlugin, {
         },
       },
     },
-    "medium-graph": {
-      initial: {
-        scaleY: 0,
-      },
-      visible: {
-        scaleY: 25,
-        transition: {
-          duration: 2000,
-          ease: "linear",
-        },
-      },
-    },
-    "large-graph1": {
-      initial: {
-        scaleY: 0,
-      },
-      visible: {
-        scaleY: 35,
-        transition: {
-          duration: 2000,
-          ease: "linear",
-        },
-      },
-    },
-    "large-graph2": {
-      initial: {
-        scaleY: 0,
-      },
-      visible: {
-        scaleY: 39,
-        transition: {
-          duration: 2000,
-          ease: "linear",
-        },
-      },
-    },
     "large-graph3": {
       initial: {
         scaleY: 0,
@@ -230,6 +194,54 @@ app.use(MotionPlugin, {
       },
       visible: {
         scaleY: 90,
+        transition: {
+          duration: 2000,
+          ease: "linear",
+        },
+      },
+    },
+    "max-graph-mobile": {
+      initial: {
+        scaleY: 0,
+      },
+      visible: {
+        scaleY: 60,
+        transition: {
+          duration: 2000,
+          ease: "linear",
+        },
+      },
+    },
+    "large-graph5-mobile": {
+      initial: {
+        scaleY: 0,
+      },
+      visible: {
+        scaleY: 50,
+        transition: {
+          duration: 2000,
+          ease: "linear",
+        },
+      },
+    },
+    "large-graph4-mobile": {
+      initial: {
+        scaleY: 0,
+      },
+      visible: {
+        scaleY: 35,
+        transition: {
+          duration: 2000,
+          ease: "linear",
+        },
+      },
+    },
+    "large-graph3-mobile": {
+      initial: {
+        scaleY: 0,
+      },
+      visible: {
+        scaleY: 25,
         transition: {
           duration: 2000,
           ease: "linear",

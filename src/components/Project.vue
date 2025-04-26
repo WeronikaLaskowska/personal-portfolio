@@ -1,9 +1,9 @@
 <template>
   <div 
     class="project-card relative overflow-hidden rounded-2xl transition-all duration-700 ease-out"
-    :class="{'expanded': isExpanded}"
-    @mouseenter="isExpanded = true" 
-    @mouseleave="isExpanded = false"
+    :class="{'expanded': isExpanded || isMobile}"
+    @mouseenter="handleMouseEnter" 
+    @mouseleave="handleMouseLeave"
   >
     <!-- Card Background with Animated Gradient -->
     <div class="absolute inset-0 bg-gradient-to-br from-white to-pink-50 dark:from-slate-900 dark:to-slate-800 transition-all duration-700">
@@ -12,39 +12,39 @@
     
     <!-- Decorative Shapes -->
     <div class="absolute -top-12 -right-12 w-32 h-32 rounded-full bg-[#ffdedd]/30 blur-2xl transform transition-all duration-1000"
-         :class="{'scale-150': isExpanded}"></div>
+         :class="{'scale-150': isExpanded || isMobile}"></div>
     <div class="absolute -bottom-16 -left-8 w-32 h-32 rounded-full bg-pink-200/40 blur-2xl transform transition-all duration-1000 delay-100"
-         :class="{'scale-125': isExpanded}"></div>
+         :class="{'scale-125': isExpanded || isMobile}"></div>
     <div class="absolute top-1/2 right-1/4 w-12 h-12 rounded-full bg-white/50 blur-xl transform transition-all duration-1000 animate-float"></div>
     
     <!-- Content Container -->
     <div class="relative z-10 flex flex-col h-full p-1">
       <!-- Image with Hover Effects -->
       <div class="image-container relative w-full overflow-hidden rounded-xl transition-all duration-700 ease-out"
-           :class="{'h-40': isExpanded, 'h-60': !isExpanded}">
+           :class="{'h-40': isExpanded || isMobile, 'h-60': !isExpanded && !isMobile}">
         <!-- Image -->
         <img 
           :src="imgURL" 
           alt="" 
           class="absolute w-full h-full object-cover transition-all duration-700"
-          :class="{'scale-110 filter brightness-90': isExpanded}"
+          :class="{'scale-110 filter brightness-90': isExpanded || isMobile}"
         />
         
         <!-- Animated Overlay -->
         <div class="absolute inset-0 bg-gradient-to-t from-[#ffdedd]/90 via-[#ffdedd]/30 to-transparent opacity-0 transition-opacity duration-500"
-             :class="{'opacity-100': isExpanded}"></div>
+             :class="{'opacity-100': isExpanded || isMobile}"></div>
              
         <!-- Project Title (Visible only when not expanded) -->
         <div class="absolute inset-0 flex items-center justify-center transition-all duration-500"
-             :class="{'opacity-0': isExpanded, 'opacity-100': !isExpanded}">
+             :class="{'opacity-0': isExpanded || isMobile, 'opacity-100': !isExpanded && !isMobile}">
           <div class="px-6 py-4 rounded-xl bg-white/30 backdrop-blur-md shadow-lg">
             <h2 class="text-2xl font-bold text-center text-slate-800 dark:text-white">{{ title }}</h2>
           </div>
         </div>
              
-        <!-- Tech Stack Pills (Appear on hover) -->
+        <!-- Tech Stack Pills (Appear on hover or mobile) -->
         <div class="tech-stack absolute bottom-4 left-0 w-full flex flex-wrap justify-center gap-2 px-4 transform transition-all duration-500 delay-200"
-             :class="{'opacity-100 translate-y-0': isExpanded, 'opacity-0 translate-y-8': !isExpanded}">
+             :class="{'opacity-100 translate-y-0': isExpanded || isMobile, 'opacity-0 translate-y-8': !isExpanded && !isMobile}">
           <span v-for="(tech, index) in stackArray" :key="index"
                 class="tech-pill rounded-full px-3 py-1 text-xs font-medium text-slate-800 backdrop-blur-sm transition-all duration-300"
                 :style="{ animationDelay: index * 0.1 + 's' }">
@@ -53,11 +53,11 @@
         </div>
       </div>
       
-      <!-- Details Section (Expands on hover) -->
+      <!-- Details Section (Expands on hover or always on mobile) -->
       <div class="content relative px-6 py-5 transition-all duration-500 ease-out overflow-hidden"
-           :class="{'opacity-100 max-h-64': isExpanded, 'opacity-0 max-h-0 py-0': !isExpanded}">
+           :class="{'opacity-100 max-h-64': isExpanded || isMobile, 'opacity-0 max-h-0 py-0': !isExpanded && !isMobile}">
         <!-- Project Title (Inside expanded content) -->
-        <h2 class="text-2xl font-bold text-slate-800 dark:text-white mb-3">{{ title }}</h2>
+        <h2 class="text-lg font-bold text-slate-800 dark:text-white mb-3">{{ title }}</h2>
         
         <!-- Description -->
         <p class="text-sm text-slate-600 dark:text-slate-300 mb-4">{{ long }}</p>
@@ -75,12 +75,12 @@
     
     <!-- Interactive Corner Element -->
     <div class="absolute -bottom-10 -right-10 w-20 h-20 rounded-full bg-[#ffdedd] transition-all duration-500 ease-bounce"
-         :class="{'scale-0': !isExpanded, 'scale-100': isExpanded}"></div>
+         :class="{'scale-0': !isExpanded && !isMobile, 'scale-100': isExpanded || isMobile}"></div>
   </div>
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, ref } from "vue";
+import { computed, defineComponent, ref, onMounted, onUnmounted } from "vue";
 
 export default defineComponent({
   name: "ProjectCard",
@@ -94,6 +94,32 @@ export default defineComponent({
   },
   setup(props) {
     const isExpanded = ref(false);
+    const isMobile = ref(false);
+    
+    const checkIfMobile = () => {
+      isMobile.value = window.innerWidth <= 768; // Typowa szerokość dla urządzeń mobilnych
+    };
+    
+    onMounted(() => {
+      checkIfMobile();
+      window.addEventListener('resize', checkIfMobile);
+    });
+    
+    onUnmounted(() => {
+      window.removeEventListener('resize', checkIfMobile);
+    });
+    
+    const handleMouseEnter = () => {
+      if (!isMobile.value) {
+        isExpanded.value = true;
+      }
+    };
+    
+    const handleMouseLeave = () => {
+      if (!isMobile.value) {
+        isExpanded.value = false;
+      }
+    };
     
     const redirect = (event: Event) => {
       event.stopPropagation();
@@ -107,6 +133,8 @@ export default defineComponent({
       if (props.name === "portfolio") return "./port.png";
       if (props.name === "game") return "./game.png";
       if (props.name === "tictac") return "./tictac.png";
+      if (props.name === "seniorapp") return "./seniorapp.png";
+      if (props.name === "adrem") return "./adrem1.png";
       return "";
     });
     
@@ -116,6 +144,9 @@ export default defineComponent({
 
     return {
       isExpanded,
+      isMobile,
+      handleMouseEnter,
+      handleMouseLeave,
       redirect,
       imgURL,
       stackArray
@@ -134,9 +165,24 @@ export default defineComponent({
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
+.project-card.expanded,
 .project-card:hover {
   box-shadow: 0 20px 40px rgba(255, 222, 221, 0.3);
   transform: translateY(-10px);
+}
+
+/* Tylko na desktopach transformacja przy hover */
+@media (min-width: 769px) {
+  .project-card:hover {
+    transform: translateY(-10px);
+  }
+}
+
+/* Na mobilnych urządzeniach zawsze lekko podniesiony */
+@media (max-width: 768px) {
+  .project-card {
+    transform: translateY(-5px);
+  }
 }
 
 .tech-pill {

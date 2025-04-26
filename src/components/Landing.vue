@@ -1,5 +1,5 @@
 <template>
-  <div v-motion-titles class="wrapper">
+  <div v-motion-titles id="home" class="wrapper">
     <!-- Moved hero_area to the top with original color -->
     <div class="hero_area">
       <svg
@@ -42,7 +42,7 @@
     <div
       class="text-center container  pb-[200px] justify-center overflow-hidden min-w-full max-w-screen mx-auto min-h-full"
     >
-      <div class="flex flex-row gap-4 justify-center items-start">
+      <div class="flex flex-col md:flex-row gap-4 justify-center items-start">
         <div class="grid px-10">
           <!-- <h1 v-motion-title-left class="title">{{ $t("home.hello") }}</h1> -->
           <h1 v-motion-title-left class="title">
@@ -68,7 +68,7 @@
           </p>
           <!-- <img class="mt-4 contact-img" src="./../assets/contact.png" alt="" /> -->
         </div>
-        <div v-motion-title-right class="">
+        <div v-motion-title-right class="mx-auto md:mx-0 max-w-[300px] md:max-w-[unset]">
           <img class="contact-img" src="./../assets/landing.png" alt="" />
         </div>
       </div>

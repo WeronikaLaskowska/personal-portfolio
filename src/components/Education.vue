@@ -88,13 +88,10 @@
             >{{ $t("app.december") }} 2021 - {{ $t("app.present") }}<br
           /></span>
           {{ $t("edu.work") }}
-          <span @click="redirect('senior')" class="clickable clickable-red"
-            >SeniorApp</span
-          >
-          {{ $t("app.and") }}
-          <span @click="redirect('exposo')" class="clickable clickable-red"
-            >Logiplanner.eu</span
+          <span @click="redirect('adrem')" class="clickable clickable-red"
+            >AdREM</span
           >.
+          
         </p>
       </div>
     </div>
@@ -109,6 +106,7 @@ export default defineComponent({
   setup() {
     let lang = ref(window.localStorage.getItem("lan"));
     const redirect = (to: any) => {
+      if (to === "adrem") window.open("https://adrem.energy/", "_blank");
       if (to === "sysmo") window.open("https://sysmo.pl/", "_blank");
       if (to === "uni") window.open("https://www.uni.lodz.pl/", "_blank");
       if (to === "senior") window.open("https://seniorapp.pl/", "_blank");

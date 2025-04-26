@@ -3,8 +3,7 @@
     id="abi"
     class="container overflow-hidden min-w-full max-w-screen min-h-full"
   >
-    <div class="grid place-items-center my-20">
-   
+    <div class="grid md:place-items-center my-20">
       <h1 v-motion-title-left class="title">
         {{ $t("abilities.title") }}
         <svg
@@ -21,16 +20,15 @@
             stroke-width="4"
             fill="none"
           />
-        </svg>
+        </svg> 
       </h1>
-      <!-- <h1 v-motion-title-left class="title">{{ $t("abilities.title") }}</h1> -->
-
-      <!-- <div v-motion-titles class="learning flex ml-20 sm:ml-6 lg:ml-0">
-        <div class="box mr-4"></div>
-        <p>- {{ $t("abilities.learning") }}</p>
-      </div> -->
-      <div class="py-12 mt-[70px] pb-[100px]">
+    
+      <div class="py-12 hidden md:flex md:flex-col mt-[70px] pb-[150px]">
         <chart />
+      </div>
+    
+      <div class="py-12 flex md:hidden flex-col mt-[70px] pb-[150px]">
+        <chart-mobile />
       </div>
     </div>
   </div>
@@ -77,9 +75,10 @@
 <script lang="ts">
 import { defineComponent, ref } from "vue";
 import Chart from "./Chart.vue";
+import ChartMobile from "./ChartMobile.vue";
 export default defineComponent({
   name: "Abilities",
-  components: { Chart },
+  components: { Chart, ChartMobile },
   setup() {
     const bigScreen = ref(true);
     if (window.innerWidth > 766) bigScreen.value = true;
@@ -156,7 +155,6 @@ export default defineComponent({
   width: 100%;
   overflow: visible;
   padding-left: 20px;
-
 }
 
 .path {
@@ -176,17 +174,21 @@ export default defineComponent({
   .title-underline {
     bottom: -8px;
   }
+  .title {
+    font-size: 66px;
+  }
 }
 @media screen and (max-width: 700px) {
   .title-underline {
-    bottom: -6px;
+    bottom: -26px;
+    max-width: 300px;
+  }
+  .title {
+    font-size: 36px;
+    text-align: left;
   }
 }
-@media screen and (max-width: 500px) {
-  .title-underline {
-    bottom: -5px;
-  }
-}
+
 
 @keyframes move-forever {
   0% {
@@ -203,5 +205,6 @@ export default defineComponent({
     height: 40px;
     min-height: 40px;
   }
+ 
 }
 </style>

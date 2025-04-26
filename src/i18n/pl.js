@@ -1,83 +1,102 @@
 export default {
   home: {
     myName: "Nazywam się",
-    about:
-      "Moją pasja jest tworzenie i projektowanie przeróżnych rzeczy w internecie.",
-      hello:"Cześć!",
-      intro:"Nazywam się Weronika i jestem front-end developerem z doświadczeniem. Zajmuję się głównie tworzeniem stron internetowych oraz aplikacji webowych, jednak mam równiez doświadczenie w technologiach mobilnych. Jeśli chcesz dowiedzieć się więcej, scrolluj."
+    about: "Lubię budować i projektować rzeczy na potrzeby internetu.",
+    hello: "Cześć!",
+    intro:
+      "Nazywam się Weronika i jestem doświadczoną front-end developerką. Głównie tworzę strony internetowe oraz aplikacje webowe, jednak mam również doświadczenie w technologiach mobilnych. Jeśli chcesz dowiedzieć się więcej, scrolluj dalej.",
   },
   about: {
     title: "Kim jestem?",
-    aboutMe: "Nazywam się Weronika i mam 23 lata. Jestem ",
+    aboutMe: "Mam na imię Weronika i mam 23 lata. Jestem ",
+    aboutMeDistinct: "front-end developerką ",
     aboutMe2:
-      "z zainteresowaniem do różnych technologii oraz z zapałem do nauki i rozwijania się w różnych kierunkach. W przyszłości planuję zostać full-stack developerem, a jeszcze później dokształcić się jako programista aplikacji mobilnych. Jestem osobą pełną mobilizacji, skupioną i zdeterminowaną. Jeśli wyznaczam sobie cel, robie wszystko aby go osiągnąć.",
-    aboutMeDistinct: " front-end developerem",
-    after: "Czas wolny",
-    hobbys: "Mam różne  ",
+      "z zainteresowaniem wieloma technologiami i pasją do rozwoju oraz poszerzania wiedzy w różnych kierunkach. Specjalizuję się głównie w Next.js, React, Typescript, Vue oraz Tailwind CSS, ale w swojej pracy korzystałam również z wielu innych technologii i bibliotek. Mam także doświadczenie w React Native.",
+    after: "Po kodowaniu",
+    hobbys: "Mam szeroką gamę ",
+    hobbysDistinct: "zainteresowań i hobby.",
     hobbys2:
-      "Po ciężkim dniu pracy moim ulubionym sposobem, aby się zrelaksować jest granie w gry video! Moim ulubionym gatunkiem jest Japoński RPG. Moim największym marzeniem jest podróż do tego kraju.",
-    hobbysDistinct: "hobby i zainteresowania. ",
+      " Po intensywnym dniu kodowania, moim ulubionym sposobem na relaks jest granie w gry wideo. Mój ulubiony gatunek to japońskie RPG. Moim największym marzeniem jest podróż do Japonii.",
   },
   edu: {
-    title: "Edukacja",
+    title: "Wykształcenie",
     education:
-      "Ukończyłam studia informatyczne na Uniwersytecie Łódzkim, uzyskując dyplom w czerwcu 2022. Ukończyłam je ze świetnym wynikiem, otrzymując za to stypendium naukowe. Od tamtej pory, kontynuuję naukę we własnym zakresie. Używam platform takich jak Udemy i Youtube. Ukończyłam tam wiele wysoko ocenianych kursów. Korzystam również z Twittera, codziennie ucząc się nowych sztuczek i porad dotyczących programowania.",
-    workTitle: "Doświadczenie",
-    work: "Zdobyłam ogrom praktycznego doświadczenia i wartościowej wiedzy pracując jako front-end developer w Sysmo. Miałam przyjemność pracować nad projektami takimi jak, między innymi:",
+      "Ukończyłam studia informatyczne na Uniwersytecie Łódzkim i uzyskałam dyplom w czerwcu 2022 roku. Studia ukończyłam z bardzo dobrym wynikiem oraz stypendium. Od tego czasu regularnie rozwijam swoją wiedzę samodzielnie. Korzystam z platform takich jak Udemy czy YouTube. Ukończyłam wiele wysoko ocenianych kursów. Jestem również aktywną użytkowniczką Twittera, gdzie codziennie czerpię wiedzę i poznaję ciekawe wskazówki dotyczące programowania.",
+    workTitle: "Doświadczenie zawodowe",
+    work: "Zdobyłam dużo praktycznego doświadczenia i cennej wiedzy pracując jako front-end developerka w firmie Sysmo. Wykorzystywałam technologie takie jak: Javascript, Typescript, Next.js, React, React Native, Vue 2.0, Vue 3.0, Tailwind CSS, MUI, Syncfusion, Shadcn, React Queries, Zod, Zustand, Pinia, Vuex i wiele innych. Miałam także okazję pełnić rolę głównej front-end developerki w projekcie outsourcingowym dla firmy",
   },
   abilities: {
-    title: "Umiejętności",
-    learning: "w trakcie nauki",
+    title: "Moje umiejętności",
+    learning: "aktualnie uczę się",
   },
   projects: {
-    title: "Moje projekty",
-    watch: "PRZEJDŹ",
+    title: "Projekty",
+    watch: "ZOBACZ",
+    seniorapp: {
+      title: "(Praca) Seniorapp",
+      tools: "Vue 3.0 - Typescript",
+      description:
+        "Seniorapp to aplikacja webowa, nad którą miałam przyjemność pracować w ramach współpracy z firmą Sysmo.pl. Miałam okazję tworzyć kluczowe funkcjonalności aplikacji obok bardzo utalentowanych programistów.",
+    },
+    adrem: {
+      title: "(Praca) ESG Databoard",
+      tools: "React - Typescript - Syncfusion - Azure",
+      description:
+        "Aplikacja, nad którą pracowałam jako outsource developerka dla firmy Adrem. Pełniłam rolę głównej front-end developerki w tym projekcie. To jeden z najbardziej złożonych projektów, nad którymi pracowałam, a zdobyte doświadczenie jest dla mnie bezcenne.",
+    },
     planOrganiser: {
-      title: "Aplikacja WEB'owa - Plan Organiser",
+      title: "(Osobiste) Plan Organiser",
       tools: "Vue 2.0 - Vue Router - Firebase",
       description:
-        "Aplikacja webowa stworzona na potrzeby pracy licencjackiej. Została stworzona dla nauczycieli i pracowników szkół podstawowych i ponadpodstawowych. Jej celem jest ułatwienie im czynności jaką jest tworzenie planu zajęć. Plan Organiser jest narzędziem webowym stworzonym przy użyciu języka JavaScript oraz framwork'a Vue.js.",
+        "Plan Organiser to aplikacja webowa stworzona na potrzeby mojej pracy dyplomowej. Zaprojektowana dla nauczycieli i pracowników szkół, ułatwia planowanie lekcji. Zbudowana przy użyciu JavaScriptu oraz frameworka Vue.js.",
     },
     water: {
-      title: "Strona internetowa - Save Water",
+      title: "(Osobiste) Save Water",
       tools: "HTML - CSS - Sass",
       description:
-        "Strona stworzona aby poćwiczyć niektóre zaawansowane mechaniki przy użyciu CSS'a oraz preprocesora SASS.",
+        "Strona internetowa stworzona dla zabawy i ćwiczenia zaawansowanych koncepcji CSS z użyciem preprocesora Sass.",
     },
     ramen: {
-      title: "Strona internetowa - NEKO Ramen",
-      tools: "React - Framer Motion - Styled components",
+      title: "(Osobiste) NEKO Ramen",
+      tools: "React - Framer Motion - Styled Components",
       description:
-        "Strona dla fikcyjnej restauracji Japońskiej serwującej ramen. Stworzona przy użyciu framework'a React oraz jego bibliotek. Jestem miłośnikiem ramenu więc tworzenie jej było czystą przyjemnością!",
+        "Strona internetowa dla fikcyjnej japońskiej restauracji serwującej ramen. Stworzona przy użyciu Reacta i powiązanych bibliotek. Jako miłośniczka ramenu, tworzenie tego projektu było dla mnie czystą przyjemnością!",
     },
     portfolio: {
-      title: "Portfolio",
-      tools: "JavaScript - CSS - HTML",
+      title: "(Osobiste) Strona Portfolio",
+      tools: "Vue 3.0 - V-Motion - Tailwind",
       description:
-        "Moja stara strona portfolio stworzona około pół roku temu. Zobacz mój progress!",
+        "Strona portfolio prezentująca moje doświadczenie zawodowe.",
     },
     game: {
-      title: "Strona internetowa - Game Center",
+      title: "(Osobiste) Game Center",
       tools: "Vue 3.0 - Pinia - CSS - Typescript",
       description:
-        "Strona z aktualnie popularnymi grami video. Wykorzystałam do jej utworzenia darmowe OpenCritic API. Strona wykonana przy użyciu frameworka Vue.js. Store management - Pinia.",
+        "Strona prezentująca aktualnie popularne gry wideo. Wyświetla dane oraz recenzje gier. Wykorzystałam darmowe API OpenCritic. Stworzona przy użyciu Vue.js oraz Pinia do zarządzania stanem.",
     },
     tictac: {
-      title: "Kółko i krzyżyk - Gra",
+      title: "Gra w Kółko i Krzyżyk",
       tools: "Vue 3.0 - CSS",
-      description: "Prosta gra w kółko i krzyżyk w neonowej stylistyce. ",
+      description: "Prosta gra w kółko i krzyżyk w stylu neonowym.",
     },
   },
   contact: {
-    title: "Skontaktuj się!",
-    text: "Zachęcam do kontaktu przez moje sociale, lub adres email:",
+    title: "Skontaktuj się ze mną!",
+    text: "Zapraszam do kontaktu poprzez moje media społecznościowe lub adres e-mail:",
   },
   app: {
     and: "i",
     december: "Grudzień",
     january: "Styczeń",
-    soFar: "póki co",
-    hello: "Witaj!",
-    present: "Teraz",
+    soFar: "do tej pory",
+    hello: "Cześć!",
+    present: "Obecnie",
+  },
+  nav: {
+    about: "O mnie",
+    home: "Strona główna",
+    edu: "Wykształcenie",
+    abilities: "Umiejętności",
+    projects: "Projekty",
   },
 };
