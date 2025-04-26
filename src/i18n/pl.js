@@ -81,7 +81,7 @@ export default {
     },
   },
   contact: {
-    title: "Skontaktuj się ze mną!",
+    title: "Skontaktuj się!",
     text: "Zapraszam do kontaktu poprzez moje media społecznościowe lub adres e-mail:",
   },
   app: {
